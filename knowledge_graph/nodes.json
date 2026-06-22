@@ -1,0 +1,1780 @@
+[
+  {
+    "id": "Chapter_绪论",
+    "label": "Chapter",
+    "name": "绪论",
+    "description": "机器学习的基本概念与发展历程",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_机器学习",
+    "label": "Concept",
+    "name": "机器学习",
+    "description": "研究如何让计算机从数据中自动学习规律并改善自身性能的一门学科",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_数据集",
+    "label": "Concept",
+    "name": "数据集",
+    "description": "一组记录的集合，每条记录描述一个事件或对象",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_样本",
+    "label": "Concept",
+    "name": "样本",
+    "description": "数据集中的每条记录，也称实例或数据点",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_特征",
+    "label": "Concept",
+    "name": "特征",
+    "description": "描述样本某方面性质的属性或变量",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_标记",
+    "label": "Concept",
+    "name": "标记",
+    "description": "样本的预期输出或目标值，也称标签",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_训练集",
+    "label": "Concept",
+    "name": "训练集",
+    "description": "用于训练模型的数据子集",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_测试集",
+    "label": "Concept",
+    "name": "测试集",
+    "description": "用于评估模型泛化能力的数据子集",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_假设空间",
+    "label": "Concept",
+    "name": "假设空间",
+    "description": "所有可能的模型或假设的集合",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_版本空间",
+    "label": "Concept",
+    "name": "版本空间",
+    "description": "与训练数据一致的所有假设构成的子集",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_归纳偏好",
+    "label": "Concept",
+    "name": "归纳偏好",
+    "description": "学习算法在学习过程中对某种类型假设的偏好",
+    "chapter": "1"
+  },
+  {
+    "id": "Task_监督学习",
+    "label": "Task",
+    "name": "监督学习",
+    "description": "利用带标记的训练数据学习输入到输出映射关系的学习范式",
+    "chapter": "1"
+  },
+  {
+    "id": "Task_无监督学习",
+    "label": "Task",
+    "name": "无监督学习",
+    "description": "从无标记数据中发现隐含结构或模式的学习范式",
+    "chapter": "1"
+  },
+  {
+    "id": "Task_分类",
+    "label": "Task",
+    "name": "分类",
+    "description": "预测样本属于哪个离散类别的监督学习任务",
+    "chapter": "1"
+  },
+  {
+    "id": "Task_回归",
+    "label": "Task",
+    "name": "回归",
+    "description": "预测样本连续数值输出的监督学习任务",
+    "chapter": "1"
+  },
+  {
+    "id": "Task_聚类",
+    "label": "Task",
+    "name": "聚类",
+    "description": "将数据自动划分为若干组的无监督学习任务",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_奥卡姆剃刀",
+    "label": "Concept",
+    "name": "奥卡姆剃刀",
+    "description": "在多个假设与观测一致时，选择最简单的那个",
+    "chapter": "1"
+  },
+  {
+    "id": "Concept_没有免费的午餐定理",
+    "label": "Concept",
+    "name": "没有免费的午餐定理",
+    "description": "不存在对所有问题都最优的算法，算法性能与问题相关",
+    "chapter": "1"
+  },
+  {
+    "id": "Chapter_模型评估与选择",
+    "label": "Chapter",
+    "name": "模型评估与选择",
+    "description": "如何科学地评估和选择机器学习模型",
+    "chapter": "2"
+  },
+  {
+    "id": "Concept_过拟合",
+    "label": "Concept",
+    "name": "过拟合",
+    "description": "模型在训练集上表现好但泛化能力差，学到了数据中的噪声",
+    "chapter": "2"
+  },
+  {
+    "id": "Concept_欠拟合",
+    "label": "Concept",
+    "name": "欠拟合",
+    "description": "模型在训练集上表现也不好，未能学到数据的真实规律",
+    "chapter": "2"
+  },
+  {
+    "id": "Concept_泛化能力",
+    "label": "Concept",
+    "name": "泛化能力",
+    "description": "模型在未见过的数据上的预测能力",
+    "chapter": "2"
+  },
+  {
+    "id": "Concept_偏差-方差分解",
+    "label": "Concept",
+    "name": "偏差-方差分解",
+    "description": "将泛化误差分解为偏差、方差和噪声三部分",
+    "chapter": "2"
+  },
+  {
+    "id": "Concept_偏差",
+    "label": "Concept",
+    "name": "偏差",
+    "description": "模型预测值的期望与真实值之间的差距，反映模型的拟合能力",
+    "chapter": "2"
+  },
+  {
+    "id": "Concept_方差",
+    "label": "Concept",
+    "name": "方差",
+    "description": "模型在不同训练集上预测结果的波动程度，反映模型的稳定性",
+    "chapter": "2"
+  },
+  {
+    "id": "Method_留出法",
+    "label": "Method",
+    "name": "留出法",
+    "description": "将数据集划分为互斥的训练集和测试集",
+    "chapter": "2"
+  },
+  {
+    "id": "Method_交叉验证",
+    "label": "Method",
+    "name": "交叉验证",
+    "description": "将数据集分成k折，轮流用其中一折做测试集，其余做训练集",
+    "chapter": "2"
+  },
+  {
+    "id": "Method_自助法",
+    "label": "Method",
+    "name": "自助法",
+    "description": "有放回地从数据集中采样构建训练集，适用于小数据集",
+    "chapter": "2"
+  },
+  {
+    "id": "Metric_准确率",
+    "label": "Metric",
+    "name": "准确率",
+    "description": "分类正确的样本占总样本的比例: (TP+TN)/(TP+TN+FP+FN)",
+    "chapter": "2"
+  },
+  {
+    "id": "Metric_精确率",
+    "label": "Metric",
+    "name": "精确率",
+    "description": "预测为正的样本中真正为正的比例: TP/(TP+FP)",
+    "chapter": "2"
+  },
+  {
+    "id": "Metric_召回率",
+    "label": "Metric",
+    "name": "召回率",
+    "description": "真正为正的样本中被正确预测的比例: TP/(TP+FN)",
+    "chapter": "2"
+  },
+  {
+    "id": "Metric_F1分数",
+    "label": "Metric",
+    "name": "F1分数",
+    "description": "精确率和召回率的调和平均: 2*P*R/(P+R)",
+    "chapter": "2"
+  },
+  {
+    "id": "Metric_ROC曲线",
+    "label": "Metric",
+    "name": "ROC曲线",
+    "description": "以假正率为横轴、真正率为纵轴绘制的曲线",
+    "chapter": "2"
+  },
+  {
+    "id": "Metric_AUC",
+    "label": "Metric",
+    "name": "AUC",
+    "description": "ROC曲线下的面积，值越大模型性能越好",
+    "chapter": "2"
+  },
+  {
+    "id": "Metric_均方误差",
+    "label": "Metric",
+    "name": "均方误差",
+    "description": "回归任务中预测值与真实值差值的平方的均值",
+    "chapter": "2"
+  },
+  {
+    "id": "Metric_混淆矩阵",
+    "label": "Metric",
+    "name": "混淆矩阵",
+    "description": "展示分类结果中各类别正确和错误预测数量的矩阵",
+    "chapter": "2"
+  },
+  {
+    "id": "Chapter_线性模型",
+    "label": "Chapter",
+    "name": "线性模型",
+    "description": "基于输入特征线性组合的基本模型族",
+    "chapter": "3"
+  },
+  {
+    "id": "Algorithm_线性回归",
+    "label": "Algorithm",
+    "name": "线性回归",
+    "description": "通过线性函数拟合输入与连续输出之间关系的回归方法",
+    "chapter": "3"
+  },
+  {
+    "id": "Algorithm_对数几率回归",
+    "label": "Algorithm",
+    "name": "对数几率回归",
+    "description": "用Sigmoid函数将线性输出映射为概率，用于二分类问题",
+    "chapter": "3"
+  },
+  {
+    "id": "Algorithm_感知机",
+    "label": "Algorithm",
+    "name": "感知机",
+    "description": "最简单的线性分类器，通过超平面划分两类数据",
+    "chapter": "3"
+  },
+  {
+    "id": "Algorithm_线性判别分析",
+    "label": "Algorithm",
+    "name": "线性判别分析",
+    "description": "寻找使类间距离最大、类内距离最小的投影方向",
+    "chapter": "3"
+  },
+  {
+    "id": "Algorithm_最小二乘法",
+    "label": "Algorithm",
+    "name": "最小二乘法",
+    "description": "通过最小化误差平方和求解线性回归参数的经典方法",
+    "chapter": "3"
+  },
+  {
+    "id": "Algorithm_多分类 OvO",
+    "label": "Algorithm",
+    "name": "多分类 OvO",
+    "description": "将多分类问题拆分为多个一对一的二分类问题",
+    "chapter": "3"
+  },
+  {
+    "id": "Algorithm_多分类 OvR",
+    "label": "Algorithm",
+    "name": "多分类 OvR",
+    "description": "将每个类别与其余所有类别做二分类",
+    "chapter": "3"
+  },
+  {
+    "id": "Method_梯度下降",
+    "label": "Method",
+    "name": "梯度下降",
+    "description": "沿损失函数梯度的反方向迭代更新参数的优化方法",
+    "chapter": "3"
+  },
+  {
+    "id": "Method_正则化",
+    "label": "Method",
+    "name": "正则化",
+    "description": "在损失函数中加入惩罚项以限制模型复杂度，防止过拟合",
+    "chapter": "3"
+  },
+  {
+    "id": "Concept_超平面",
+    "label": "Concept",
+    "name": "超平面",
+    "description": "n维空间中维度为n-1的子空间，线性模型的决策边界",
+    "chapter": "3"
+  },
+  {
+    "id": "Chapter_决策树",
+    "label": "Chapter",
+    "name": "决策树",
+    "description": "基于树形结构进行决策的可解释性模型",
+    "chapter": "4"
+  },
+  {
+    "id": "Algorithm_ID3",
+    "label": "Algorithm",
+    "name": "ID3",
+    "description": "使用信息增益作为划分准则的决策树算法",
+    "chapter": "4"
+  },
+  {
+    "id": "Algorithm_C4.5",
+    "label": "Algorithm",
+    "name": "C4.5",
+    "description": "使用信息增益比作为划分准则，支持连续值和缺失值处理",
+    "chapter": "4"
+  },
+  {
+    "id": "Algorithm_CART",
+    "label": "Algorithm",
+    "name": "CART",
+    "description": "使用基尼指数作为划分准则，生成二叉决策树",
+    "chapter": "4"
+  },
+  {
+    "id": "Concept_信息熵",
+    "label": "Concept",
+    "name": "信息熵",
+    "description": "度量样本集合纯度的指标，熵越小纯度越高: -Σp·log(p)",
+    "chapter": "4"
+  },
+  {
+    "id": "Concept_信息增益",
+    "label": "Concept",
+    "name": "信息增益",
+    "description": "划分前后信息熵的减少量，值越大说明该特征的区分能力越强",
+    "chapter": "4"
+  },
+  {
+    "id": "Concept_信息增益比",
+    "label": "Concept",
+    "name": "信息增益比",
+    "description": "信息增益与特征固有值的比值，克服信息增益偏好多值特征的缺点",
+    "chapter": "4"
+  },
+  {
+    "id": "Concept_基尼指数",
+    "label": "Concept",
+    "name": "基尼指数",
+    "description": "度量样本集合不纯度的指标，基尼指数越小纯度越高",
+    "chapter": "4"
+  },
+  {
+    "id": "Concept_剪枝",
+    "label": "Concept",
+    "name": "剪枝",
+    "description": "通过去除部分节点来简化决策树，防止过拟合",
+    "chapter": "4"
+  },
+  {
+    "id": "Concept_预剪枝",
+    "label": "Concept",
+    "name": "预剪枝",
+    "description": "在决策树生成过程中提前停止分裂",
+    "chapter": "4"
+  },
+  {
+    "id": "Concept_后剪枝",
+    "label": "Concept",
+    "name": "后剪枝",
+    "description": "先生成完整决策树，再自底向上剪去不必要的子树",
+    "chapter": "4"
+  },
+  {
+    "id": "Method_连续值处理",
+    "label": "Method",
+    "name": "连续值处理",
+    "description": "对连续属性进行离散化或二分法处理",
+    "chapter": "4"
+  },
+  {
+    "id": "Method_缺失值处理",
+    "label": "Method",
+    "name": "缺失值处理",
+    "description": "对含缺失值样本进行权重调整或概率分配",
+    "chapter": "4"
+  },
+  {
+    "id": "Chapter_神经网络",
+    "label": "Chapter",
+    "name": "神经网络",
+    "description": "模拟生物神经系统的非线性学习模型",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_神经元",
+    "label": "Concept",
+    "name": "神经元",
+    "description": "神经网络的基本计算单元，对输入做加权求和后经激活函数输出",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_激活函数",
+    "label": "Concept",
+    "name": "激活函数",
+    "description": "引入非线性变换的函数，使网络能拟合复杂函数",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_Sigmoid函数",
+    "label": "Concept",
+    "name": "Sigmoid函数",
+    "description": "将输入映射到(0,1)区间的S型激活函数: 1/(1+e^(-x))",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_ReLU函数",
+    "label": "Concept",
+    "name": "ReLU函数",
+    "description": "取输入与0的较大值的激活函数: max(0,x)，训练效率高",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_Tanh函数",
+    "label": "Concept",
+    "name": "Tanh函数",
+    "description": "将输入映射到(-1,1)区间的激活函数，比Sigmoid收敛更快",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_Softmax函数",
+    "label": "Concept",
+    "name": "Softmax函数",
+    "description": "将输出向量转化为概率分布的激活函数，常用于多分类",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_反向传播",
+    "label": "Concept",
+    "name": "反向传播",
+    "description": "通过链式法则从输出层向输入层逐层计算梯度的算法",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_损失函数",
+    "label": "Concept",
+    "name": "损失函数",
+    "description": "度量模型预测值与真实值之间差距的目标函数",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_多层感知机",
+    "label": "Algorithm",
+    "name": "多层感知机",
+    "description": "包含一个或多个隐藏层的前馈神经网络",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_卷积神经网络",
+    "label": "Algorithm",
+    "name": "卷积神经网络",
+    "description": "利用卷积操作提取局部特征的深度网络，擅长图像处理",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_循环神经网络",
+    "label": "Algorithm",
+    "name": "循环神经网络",
+    "description": "具有循环连接的网络，擅长处理序列数据",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_LSTM",
+    "label": "Algorithm",
+    "name": "LSTM",
+    "description": "通过门控机制解决长程依赖问题的改进型RNN",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_GRU",
+    "label": "Algorithm",
+    "name": "GRU",
+    "description": "LSTM的简化版本，门控更少但效果相当",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_生成对抗网络",
+    "label": "Algorithm",
+    "name": "生成对抗网络",
+    "description": "由生成器和判别器对抗训练的生成模型",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_Transformer",
+    "label": "Algorithm",
+    "name": "Transformer",
+    "description": "基于自注意力机制的序列模型架构，NLP和CV领域主流",
+    "chapter": "5"
+  },
+  {
+    "id": "Method_Dropout",
+    "label": "Method",
+    "name": "Dropout",
+    "description": "训练时随机丢弃部分神经元，防止过拟合的正则化方法",
+    "chapter": "5"
+  },
+  {
+    "id": "Method_批归一化",
+    "label": "Method",
+    "name": "批归一化",
+    "description": "对每一层的输入做归一化处理，加速训练并提升稳定性",
+    "chapter": "5"
+  },
+  {
+    "id": "Method_迁移学习",
+    "label": "Method",
+    "name": "迁移学习",
+    "description": "将在一个任务上学到的知识迁移到另一个相关任务",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_注意力机制",
+    "label": "Concept",
+    "name": "注意力机制",
+    "description": "使模型能够动态关注输入中重要部分的加权机制",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_池化操作",
+    "label": "Concept",
+    "name": "池化操作",
+    "description": "对特征图进行下采样以降低维度和计算量的操作",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_卷积核",
+    "label": "Concept",
+    "name": "卷积核",
+    "description": "在CNN中滑动并与输入做点积运算的小矩阵，用于特征提取",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_门控机制",
+    "label": "Concept",
+    "name": "门控机制",
+    "description": "LSTM/GRU中控制信息流通的遗忘门、输入门和输出门",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_过拟合与正则化",
+    "label": "Concept",
+    "name": "过拟合与正则化",
+    "description": "通过正则化、早停、Dropout等手段控制模型复杂度",
+    "chapter": "5"
+  },
+  {
+    "id": "Chapter_支持向量机",
+    "label": "Chapter",
+    "name": "支持向量机",
+    "description": "基于最大间隔原理的分类与回归模型",
+    "chapter": "6"
+  },
+  {
+    "id": "Algorithm_SVM",
+    "label": "Algorithm",
+    "name": "SVM",
+    "description": "寻找最大间隔超平面的分类算法，具有良好的泛化能力",
+    "chapter": "6"
+  },
+  {
+    "id": "Algorithm_软间隔SVM",
+    "label": "Algorithm",
+    "name": "软间隔SVM",
+    "description": "允许部分样本违反间隔约束的SVM变体，提高实用性",
+    "chapter": "6"
+  },
+  {
+    "id": "Algorithm_支持向量回归",
+    "label": "Algorithm",
+    "name": "支持向量回归",
+    "description": "将SVM思想扩展到回归任务，容忍一定误差的回归方法",
+    "chapter": "6"
+  },
+  {
+    "id": "Algorithm_SMO算法",
+    "label": "Algorithm",
+    "name": "SMO算法",
+    "description": "将大规模QP问题分解为小规模子问题迭代求解的高效算法",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_间隔",
+    "label": "Concept",
+    "name": "间隔",
+    "description": "分类超平面到最近训练样本的距离，SVM最大化此间隔",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_支持向量",
+    "label": "Concept",
+    "name": "支持向量",
+    "description": "距离分类超平面最近的训练样本，决定了决策边界",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_核函数",
+    "label": "Concept",
+    "name": "核函数",
+    "description": "将低维输入映射到高维空间的隐式映射函数",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_核技巧",
+    "label": "Concept",
+    "name": "核技巧",
+    "description": "通过核函数在高维空间计算内积而无需显式映射",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_对偶问题",
+    "label": "Concept",
+    "name": "对偶问题",
+    "description": "将SVM原始优化问题转化为更易求解的对偶形式",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_RBF核",
+    "label": "Concept",
+    "name": "RBF核",
+    "description": "径向基核函数，最常用的核函数，能处理非线性分类",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_多项式核",
+    "label": "Concept",
+    "name": "多项式核",
+    "description": "基于多项式展开的核函数，适合特定结构的数据",
+    "chapter": "6"
+  },
+  {
+    "id": "Chapter_贝叶斯分类器",
+    "label": "Chapter",
+    "name": "贝叶斯分类器",
+    "description": "基于概率论和贝叶斯定理的分类方法",
+    "chapter": "7"
+  },
+  {
+    "id": "Concept_贝叶斯定理",
+    "label": "Concept",
+    "name": "贝叶斯定理",
+    "description": "描述后验概率与先验概率、似然之间关系的基本定理",
+    "chapter": "7"
+  },
+  {
+    "id": "Concept_先验概率",
+    "label": "Concept",
+    "name": "先验概率",
+    "description": "在观测到数据之前，基于已有知识对参数的概率估计",
+    "chapter": "7"
+  },
+  {
+    "id": "Concept_后验概率",
+    "label": "Concept",
+    "name": "后验概率",
+    "description": "在观测到数据之后，对参数更新后的概率估计",
+    "chapter": "7"
+  },
+  {
+    "id": "Concept_极大似然估计",
+    "label": "Concept",
+    "name": "极大似然估计",
+    "description": "选择使观测数据出现概率最大的参数值的估计方法",
+    "chapter": "7"
+  },
+  {
+    "id": "Concept_条件独立性假设",
+    "label": "Concept",
+    "name": "条件独立性假设",
+    "description": "假设在给定类别的条件下，各特征之间相互独立",
+    "chapter": "7"
+  },
+  {
+    "id": "Algorithm_朴素贝叶斯",
+    "label": "Algorithm",
+    "name": "朴素贝叶斯",
+    "description": "基于条件独立性假设的简单高效贝叶斯分类器",
+    "chapter": "7"
+  },
+  {
+    "id": "Algorithm_高斯朴素贝叶斯",
+    "label": "Algorithm",
+    "name": "高斯朴素贝叶斯",
+    "description": "假设连续特征服从高斯分布的朴素贝叶斯变体",
+    "chapter": "7"
+  },
+  {
+    "id": "Algorithm_多项式朴素贝叶斯",
+    "label": "Algorithm",
+    "name": "多项式朴素贝叶斯",
+    "description": "适用于离散特征计数数据的朴素贝叶斯变体",
+    "chapter": "7"
+  },
+  {
+    "id": "Algorithm_贝叶斯网络",
+    "label": "Algorithm",
+    "name": "贝叶斯网络",
+    "description": "用有向无环图表示变量间条件依赖关系的概率图模型",
+    "chapter": "7"
+  },
+  {
+    "id": "Algorithm_半朴素贝叶斯",
+    "label": "Algorithm",
+    "name": "半朴素贝叶斯",
+    "description": "放宽条件独立性假设，允许特征间存在有限依赖",
+    "chapter": "7"
+  },
+  {
+    "id": "Algorithm_EM算法",
+    "label": "Algorithm",
+    "name": "EM算法",
+    "description": "在含隐变量的概率模型中交替执行期望步和最大化步的迭代算法",
+    "chapter": "7"
+  },
+  {
+    "id": "Method_拉普拉斯平滑",
+    "label": "Method",
+    "name": "拉普拉斯平滑",
+    "description": "对概率估计加一个小常数，避免因零概率导致整体概率为零",
+    "chapter": "7"
+  },
+  {
+    "id": "Chapter_集成学习",
+    "label": "Chapter",
+    "name": "集成学习",
+    "description": "通过组合多个基学习器来提升整体性能的方法",
+    "chapter": "8"
+  },
+  {
+    "id": "Concept_集成学习",
+    "label": "Concept",
+    "name": "集成学习",
+    "description": "构建并组合多个学习器来完成学习任务的方法论",
+    "chapter": "8"
+  },
+  {
+    "id": "Concept_基学习器",
+    "label": "Concept",
+    "name": "基学习器",
+    "description": "集成系统中的单个学习模型，通常为弱学习器",
+    "chapter": "8"
+  },
+  {
+    "id": "Concept_多样性",
+    "label": "Concept",
+    "name": "多样性",
+    "description": "基学习器之间的差异性，集成效果好坏的关键因素",
+    "chapter": "8"
+  },
+  {
+    "id": "Algorithm_Bagging",
+    "label": "Algorithm",
+    "name": "Bagging",
+    "description": "基于自助采样的并行式集成方法，降低方差",
+    "chapter": "8"
+  },
+  {
+    "id": "Algorithm_随机森林",
+    "label": "Algorithm",
+    "name": "随机森林",
+    "description": "以决策树为基学习器的Bagging变体，额外引入特征随机选择",
+    "chapter": "8"
+  },
+  {
+    "id": "Algorithm_AdaBoost",
+    "label": "Algorithm",
+    "name": "AdaBoost",
+    "description": "自适应提升算法，每轮调整样本权重聚焦难分样本",
+    "chapter": "8"
+  },
+  {
+    "id": "Algorithm_梯度提升",
+    "label": "Algorithm",
+    "name": "梯度提升",
+    "description": "在残差梯度方向上逐步添加新模型的Boosting方法",
+    "chapter": "8"
+  },
+  {
+    "id": "Algorithm_XGBoost",
+    "label": "Algorithm",
+    "name": "XGBoost",
+    "description": "梯度提升的高效实现，加入正则化和二阶优化",
+    "chapter": "8"
+  },
+  {
+    "id": "Algorithm_LightGBM",
+    "label": "Algorithm",
+    "name": "LightGBM",
+    "description": "微软提出的高效梯度提升框架，支持直方图算法和叶子生长策略",
+    "chapter": "8"
+  },
+  {
+    "id": "Algorithm_Stacking",
+    "label": "Algorithm",
+    "name": "Stacking",
+    "description": "用元学习器组合多个基学习器预测结果的分层集成方法",
+    "chapter": "8"
+  },
+  {
+    "id": "Algorithm_投票法",
+    "label": "Algorithm",
+    "name": "投票法",
+    "description": "通过多数投票或加权投票组合多个分类器结果的简单集成策略",
+    "chapter": "8"
+  },
+  {
+    "id": "Method_Bootstrap采样",
+    "label": "Method",
+    "name": "Bootstrap采样",
+    "description": "有放回地从原始数据集中随机采样，构建多样化的训练子集",
+    "chapter": "8"
+  },
+  {
+    "id": "Method_误差修正输出码",
+    "label": "Method",
+    "name": "误差修正输出码",
+    "description": "将多分类问题编码为多个二分类问题的编码集成方法",
+    "chapter": "8"
+  },
+  {
+    "id": "Chapter_聚类",
+    "label": "Chapter",
+    "name": "聚类",
+    "description": "将数据自动分组的无监督学习方法",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_K-Means",
+    "label": "Algorithm",
+    "name": "K-Means",
+    "description": "基于距离的迭代聚类算法，将数据划分为K个簇",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_K-Medoids",
+    "label": "Algorithm",
+    "name": "K-Medoids",
+    "description": "用实际数据点作为簇中心的K-Means变体，对异常值更鲁棒",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_层次聚类",
+    "label": "Algorithm",
+    "name": "层次聚类",
+    "description": "通过逐层合并或分裂构建层次化聚类结构",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_DBSCAN",
+    "label": "Algorithm",
+    "name": "DBSCAN",
+    "description": "基于密度的聚类算法，能发现任意形状的簇并识别噪声点",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_高斯混合模型",
+    "label": "Algorithm",
+    "name": "高斯混合模型",
+    "description": "假设数据由多个高斯分布混合生成的概率聚类模型",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_谱聚类",
+    "label": "Algorithm",
+    "name": "谱聚类",
+    "description": "基于图拉普拉斯矩阵特征分解的聚类方法",
+    "chapter": "9"
+  },
+  {
+    "id": "Concept_簇",
+    "label": "Concept",
+    "name": "簇",
+    "description": "聚类结果中同一组的数据点集合",
+    "chapter": "9"
+  },
+  {
+    "id": "Concept_簇中心",
+    "label": "Concept",
+    "name": "簇中心",
+    "description": "代表一个簇位置的点，如K-Means中的均值点",
+    "chapter": "9"
+  },
+  {
+    "id": "Concept_肘部法则",
+    "label": "Concept",
+    "name": "肘部法则",
+    "description": "通过观察聚类数增加时指标变化趋势来选择最佳K值",
+    "chapter": "9"
+  },
+  {
+    "id": "Metric_轮廓系数",
+    "label": "Metric",
+    "name": "轮廓系数",
+    "description": "衡量样本与自身簇和其他簇的距离之比，取值[-1,1]",
+    "chapter": "9"
+  },
+  {
+    "id": "Metric_Davies-Bouldin指数",
+    "label": "Metric",
+    "name": "Davies-Bouldin指数",
+    "description": "簇内距离与簇间距离之比的均值，越小越好",
+    "chapter": "9"
+  },
+  {
+    "id": "Metric_纯度",
+    "label": "Metric",
+    "name": "纯度",
+    "description": "簇中占比最大的真实类别比例，衡量聚类与真实标签的一致性",
+    "chapter": "9"
+  },
+  {
+    "id": "Chapter_降维与度量学习",
+    "label": "Chapter",
+    "name": "降维与度量学习",
+    "description": "降低数据维度和学习合适距离度量的方法",
+    "chapter": "10"
+  },
+  {
+    "id": "Algorithm_PCA",
+    "label": "Algorithm",
+    "name": "PCA",
+    "description": "通过正交变换将数据投影到方差最大的方向上实现降维",
+    "chapter": "10"
+  },
+  {
+    "id": "Algorithm_核PCA",
+    "label": "Algorithm",
+    "name": "核PCA",
+    "description": "利用核技巧在非线性空间中进行主成分分析",
+    "chapter": "10"
+  },
+  {
+    "id": "Algorithm_LDA降维",
+    "label": "Algorithm",
+    "name": "LDA降维",
+    "description": "在有监督条件下寻找最佳投影方向实现降维",
+    "chapter": "10"
+  },
+  {
+    "id": "Algorithm_t-SNE",
+    "label": "Algorithm",
+    "name": "t-SNE",
+    "description": "将高维数据映射到低维空间并保持局部邻域结构的可视化方法",
+    "chapter": "10"
+  },
+  {
+    "id": "Algorithm_LLE",
+    "label": "Algorithm",
+    "name": "LLE",
+    "description": "保持局部线性关系的非线性降维方法",
+    "chapter": "10"
+  },
+  {
+    "id": "Algorithm_MDS",
+    "label": "Algorithm",
+    "name": "MDS",
+    "description": "保持样本间距离关系的经典降维方法",
+    "chapter": "10"
+  },
+  {
+    "id": "Algorithm_KNN",
+    "label": "Algorithm",
+    "name": "KNN",
+    "description": "基于K个最近邻投票的分类算法，属于惰性学习",
+    "chapter": "10"
+  },
+  {
+    "id": "Concept_维度灾难",
+    "label": "Concept",
+    "name": "维度灾难",
+    "description": "随着维度增加，数据变得极度稀疏，距离度量失效的现象",
+    "chapter": "10"
+  },
+  {
+    "id": "Concept_流形学习",
+    "label": "Concept",
+    "name": "流形学习",
+    "description": "假设高维数据位于低维流形上的非线性降维思想",
+    "chapter": "10"
+  },
+  {
+    "id": "Concept_度量学习",
+    "label": "Concept",
+    "name": "度量学习",
+    "description": "从数据中学习合适的距离度量函数的方法",
+    "chapter": "10"
+  },
+  {
+    "id": "Method_距离度量",
+    "label": "Method",
+    "name": "距离度量",
+    "description": "衡量两个样本间相似程度的数学函数",
+    "chapter": "10"
+  },
+  {
+    "id": "Method_欧氏距离",
+    "label": "Method",
+    "name": "欧氏距离",
+    "description": "最常用的距离度量，两点间直线距离",
+    "chapter": "10"
+  },
+  {
+    "id": "Method_曼哈顿距离",
+    "label": "Method",
+    "name": "曼哈顿距离",
+    "description": "各维度差的绝对值之和，也称城市街区距离",
+    "chapter": "10"
+  },
+  {
+    "id": "Method_余弦相似度",
+    "label": "Method",
+    "name": "余弦相似度",
+    "description": "通过向量夹角的余弦值衡量方向相似性，忽略大小",
+    "chapter": "10"
+  },
+  {
+    "id": "Chapter_特征选择与稀疏学习",
+    "label": "Chapter",
+    "name": "特征选择与稀疏学习",
+    "description": "从原始特征中筛选有用特征和学习稀疏表示的方法",
+    "chapter": "11"
+  },
+  {
+    "id": "Concept_特征选择",
+    "label": "Concept",
+    "name": "特征选择",
+    "description": "从原始特征集合中选择最相关特征子集的过程",
+    "chapter": "11"
+  },
+  {
+    "id": "Concept_特征工程",
+    "label": "Concept",
+    "name": "特征工程",
+    "description": "通过领域知识构造新特征以提升模型性能的实践",
+    "chapter": "11"
+  },
+  {
+    "id": "Concept_稀疏性",
+    "label": "Concept",
+    "name": "稀疏性",
+    "description": "数据或模型中大部分元素为零的性质，有助于降维和可解释性",
+    "chapter": "11"
+  },
+  {
+    "id": "Concept_字典学习",
+    "label": "Concept",
+    "name": "字典学习",
+    "description": "学习一组基向量使得数据可以用稀疏线性组合表示",
+    "chapter": "11"
+  },
+  {
+    "id": "Method_过滤式选择",
+    "label": "Method",
+    "name": "过滤式选择",
+    "description": "根据特征的统计特性独立于模型进行特征评分和选择",
+    "chapter": "11"
+  },
+  {
+    "id": "Method_包裹式选择",
+    "label": "Method",
+    "name": "包裹式选择",
+    "description": "以学习器性能为评价准则，通过搜索策略选择特征子集",
+    "chapter": "11"
+  },
+  {
+    "id": "Method_嵌入式选择",
+    "label": "Method",
+    "name": "嵌入式选择",
+    "description": "在模型训练过程中自动完成特征选择的方法",
+    "chapter": "11"
+  },
+  {
+    "id": "Algorithm_LASSO",
+    "label": "Algorithm",
+    "name": "LASSO",
+    "description": "采用L1正则化实现特征选择和稀疏化的回归方法",
+    "chapter": "11"
+  },
+  {
+    "id": "Algorithm_Ridge回归",
+    "label": "Algorithm",
+    "name": "Ridge回归",
+    "description": "采用L2正则化缓解多重共线性问题的回归方法",
+    "chapter": "11"
+  },
+  {
+    "id": "Algorithm_弹性网络",
+    "label": "Algorithm",
+    "name": "弹性网络",
+    "description": "同时使用L1和L2正则化的回归方法，兼具LASSO和Ridge优点",
+    "chapter": "11"
+  },
+  {
+    "id": "Chapter_计算学习理论",
+    "label": "Chapter",
+    "name": "计算学习理论",
+    "description": "从理论角度分析学习算法的可行性和复杂度",
+    "chapter": "12"
+  },
+  {
+    "id": "Concept_PAC学习",
+    "label": "Concept",
+    "name": "PAC学习",
+    "description": "可能近似正确学习框架，分析学习算法在有限样本下的可行性",
+    "chapter": "12"
+  },
+  {
+    "id": "Concept_VC维",
+    "label": "Concept",
+    "name": "VC维",
+    "description": "衡量假设空间复杂度的指标，定义为能被shatter的最大样本数",
+    "chapter": "12"
+  },
+  {
+    "id": "Concept_Rademacher复杂度",
+    "label": "Concept",
+    "name": "Rademacher复杂度",
+    "description": "基于随机噪声衡量假设空间复杂度的指标，比VC维更精细",
+    "chapter": "12"
+  },
+  {
+    "id": "Concept_泛化误差界",
+    "label": "Concept",
+    "name": "泛化误差界",
+    "description": "以高概率保证的泛化误差上界，指导模型选择",
+    "chapter": "12"
+  },
+  {
+    "id": "Concept_结构风险最小化",
+    "label": "Concept",
+    "name": "结构风险最小化",
+    "description": "在经验风险基础上加入复杂度惩罚项的模型选择原则",
+    "chapter": "12"
+  },
+  {
+    "id": "Chapter_半监督学习",
+    "label": "Chapter",
+    "name": "半监督学习",
+    "description": "同时利用有标记和无标记数据的学习范式",
+    "chapter": "13"
+  },
+  {
+    "id": "Concept_半监督学习",
+    "label": "Concept",
+    "name": "半监督学习",
+    "description": "利用少量有标记数据和大量无标记数据共同训练的学习范式",
+    "chapter": "13"
+  },
+  {
+    "id": "Concept_直推式学习",
+    "label": "Concept",
+    "name": "直推式学习",
+    "description": "仅针对特定无标记样本进行预测，不学习通用模型",
+    "chapter": "13"
+  },
+  {
+    "id": "Algorithm_协同训练",
+    "label": "Algorithm",
+    "name": "协同训练",
+    "description": "利用多视图数据，两个分类器互相为对方提供伪标记",
+    "chapter": "13"
+  },
+  {
+    "id": "Algorithm_生成式半监督学习",
+    "label": "Algorithm",
+    "name": "生成式半监督学习",
+    "description": "基于生成模型假设，用EM算法同时估计标记和模型参数",
+    "chapter": "13"
+  },
+  {
+    "id": "Algorithm_半监督SVM",
+    "label": "Algorithm",
+    "name": "半监督SVM",
+    "description": "在SVM目标中加入无标记数据的低密度分隔约束",
+    "chapter": "13"
+  },
+  {
+    "id": "Algorithm_图半监督学习",
+    "label": "Algorithm",
+    "name": "图半监督学习",
+    "description": "将数据构建为图，利用图结构传播标记信息",
+    "chapter": "13"
+  },
+  {
+    "id": "Algorithm_自训练",
+    "label": "Algorithm",
+    "name": "自训练",
+    "description": "用已有模型预测无标记数据的伪标记，迭代扩充训练集",
+    "chapter": "13"
+  },
+  {
+    "id": "Chapter_概率图模型",
+    "label": "Chapter",
+    "name": "概率图模型",
+    "description": "用图结构表示变量间概率依赖关系的模型",
+    "chapter": "14"
+  },
+  {
+    "id": "Concept_概率图模型",
+    "label": "Concept",
+    "name": "概率图模型",
+    "description": "用图表示随机变量间条件依赖关系的概率模型框架",
+    "chapter": "14"
+  },
+  {
+    "id": "Concept_有向图模型",
+    "label": "Concept",
+    "name": "有向图模型",
+    "description": "用有向边表示因果关系的概率图模型，也称贝叶斯网络",
+    "chapter": "14"
+  },
+  {
+    "id": "Concept_无向图模型",
+    "label": "Concept",
+    "name": "无向图模型",
+    "description": "用无向边表示相关关系的概率图模型，也称马尔可夫随机场",
+    "chapter": "14"
+  },
+  {
+    "id": "Concept_条件随机场",
+    "label": "Concept",
+    "name": "条件随机场",
+    "description": "在给定输入序列条件下对输出序列建模的判别式图模型",
+    "chapter": "14"
+  },
+  {
+    "id": "Concept_马尔可夫毯",
+    "label": "Concept",
+    "name": "马尔可夫毯",
+    "description": "使一个节点与图中其余节点条件独立的邻居节点集合",
+    "chapter": "14"
+  },
+  {
+    "id": "Algorithm_隐马尔可夫模型",
+    "label": "Algorithm",
+    "name": "隐马尔可夫模型",
+    "description": "含隐状态序列的经典有向图模型，广泛用于序列标注",
+    "chapter": "14"
+  },
+  {
+    "id": "Algorithm_变量消元法",
+    "label": "Algorithm",
+    "name": "变量消元法",
+    "description": "通过逐步消去变量来精确计算边缘概率的推断算法",
+    "chapter": "14"
+  },
+  {
+    "id": "Algorithm_信念传播",
+    "label": "Algorithm",
+    "name": "信念传播",
+    "description": "在图上传递消息来近似计算边缘概率的推断算法",
+    "chapter": "14"
+  },
+  {
+    "id": "Algorithm_MCMC",
+    "label": "Algorithm",
+    "name": "MCMC",
+    "description": "通过构造马尔可夫链来近似采样和推断的随机方法",
+    "chapter": "14"
+  },
+  {
+    "id": "Algorithm_变分推断",
+    "label": "Algorithm",
+    "name": "变分推断",
+    "description": "用优化方法寻找最接近后验分布的简单分布族来近似推断",
+    "chapter": "14"
+  },
+  {
+    "id": "Algorithm_吉布斯采样",
+    "label": "Algorithm",
+    "name": "吉布斯采样",
+    "description": "每次只采样一个变量的MCMC方法，实现简单",
+    "chapter": "14"
+  },
+  {
+    "id": "Chapter_规则学习",
+    "label": "Chapter",
+    "name": "规则学习",
+    "description": "学习由规则集构成的可解释模型",
+    "chapter": "15"
+  },
+  {
+    "id": "Concept_规则学习",
+    "label": "Concept",
+    "name": "规则学习",
+    "description": "从数据中学习一组if-then规则来进行预测的方法",
+    "chapter": "15"
+  },
+  {
+    "id": "Concept_序贯覆盖法",
+    "label": "Concept",
+    "name": "序贯覆盖法",
+    "description": "逐条学习规则，每学一条就覆盖已匹配的样本",
+    "chapter": "15"
+  },
+  {
+    "id": "Algorithm_Apriori",
+    "label": "Algorithm",
+    "name": "Apriori",
+    "description": "利用频繁项集性质的经典关联规则挖掘算法",
+    "chapter": "15"
+  },
+  {
+    "id": "Algorithm_FP-Growth",
+    "label": "Algorithm",
+    "name": "FP-Growth",
+    "description": "基于FP-tree结构的高效频繁项集挖掘算法",
+    "chapter": "15"
+  },
+  {
+    "id": "Concept_关联规则",
+    "label": "Concept",
+    "name": "关联规则",
+    "description": "描述数据项之间共现关系的规则，如{尿布}→{啤酒}",
+    "chapter": "15"
+  },
+  {
+    "id": "Concept_支持度",
+    "label": "Concept",
+    "name": "支持度",
+    "description": "项集在所有事务中出现的频率",
+    "chapter": "15"
+  },
+  {
+    "id": "Concept_置信度",
+    "label": "Concept",
+    "name": "置信度",
+    "description": "在前提出现条件下结论也出现的条件概率",
+    "chapter": "15"
+  },
+  {
+    "id": "Chapter_强化学习",
+    "label": "Chapter",
+    "name": "强化学习",
+    "description": "通过与环境交互获得奖励来学习最优策略的方法",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_强化学习",
+    "label": "Concept",
+    "name": "强化学习",
+    "description": "智能体通过与环境交互，最大化累积奖励的学习范式",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_马尔可夫决策过程",
+    "label": "Concept",
+    "name": "马尔可夫决策过程",
+    "description": "强化学习的数学框架，包含状态、动作、转移概率和奖励",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_状态",
+    "label": "Concept",
+    "name": "状态",
+    "description": "环境中某个时刻的完整描述信息",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_动作",
+    "label": "Concept",
+    "name": "动作",
+    "description": "智能体在某个状态下可以执行的操作",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_奖励",
+    "label": "Concept",
+    "name": "奖励",
+    "description": "环境对智能体动作的即时反馈信号",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_策略",
+    "label": "Concept",
+    "name": "策略",
+    "description": "从状态到动作的映射，智能体的行为规则",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_值函数",
+    "label": "Concept",
+    "name": "值函数",
+    "description": "从某个状态出发的期望累积奖励，衡量状态的长期价值",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_Q值函数",
+    "label": "Concept",
+    "name": "Q值函数",
+    "description": "在某状态执行某动作后的期望累积奖励",
+    "chapter": "16"
+  },
+  {
+    "id": "Concept_探索与利用",
+    "label": "Concept",
+    "name": "探索与利用",
+    "description": "尝试新动作(探索)与选择已知最优动作(利用)之间的权衡",
+    "chapter": "16"
+  },
+  {
+    "id": "Algorithm_Q-learning",
+    "label": "Algorithm",
+    "name": "Q-learning",
+    "description": "基于时序差分的无模型强化学习算法，学习最优Q值",
+    "chapter": "16"
+  },
+  {
+    "id": "Algorithm_Sarsa",
+    "label": "Algorithm",
+    "name": "Sarsa",
+    "description": "基于时序差分的同策略强化学习算法",
+    "chapter": "16"
+  },
+  {
+    "id": "Algorithm_策略梯度",
+    "label": "Algorithm",
+    "name": "策略梯度",
+    "description": "直接参数化并优化策略函数的强化学习方法",
+    "chapter": "16"
+  },
+  {
+    "id": "Algorithm_DQN",
+    "label": "Algorithm",
+    "name": "DQN",
+    "description": "用深度神经网络近似Q值函数的深度强化学习算法",
+    "chapter": "16"
+  },
+  {
+    "id": "Algorithm_Actor-Critic",
+    "label": "Algorithm",
+    "name": "Actor-Critic",
+    "description": "结合策略梯度和值函数方法的混合架构",
+    "chapter": "16"
+  },
+  {
+    "id": "Method_SGD",
+    "label": "Method",
+    "name": "SGD",
+    "description": "随机梯度下降，每次用一个或小批量样本更新参数",
+    "chapter": ""
+  },
+  {
+    "id": "Method_小批量梯度下降",
+    "label": "Method",
+    "name": "小批量梯度下降",
+    "description": "每次用一小批样本计算梯度，兼顾效率和稳定性",
+    "chapter": ""
+  },
+  {
+    "id": "Method_动量法",
+    "label": "Method",
+    "name": "动量法",
+    "description": "引入历史梯度累积项加速收敛并减少震荡",
+    "chapter": ""
+  },
+  {
+    "id": "Method_Adam优化器",
+    "label": "Method",
+    "name": "Adam优化器",
+    "description": "结合动量和自适应学习率的优化算法，目前最常用",
+    "chapter": ""
+  },
+  {
+    "id": "Method_学习率衰减",
+    "label": "Method",
+    "name": "学习率衰减",
+    "description": "训练过程中逐步减小学习率以提高收敛精度",
+    "chapter": ""
+  },
+  {
+    "id": "Method_早停法",
+    "label": "Method",
+    "name": "早停法",
+    "description": "在验证集误差不再下降时提前终止训练，防止过拟合",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_交叉熵损失",
+    "label": "Concept",
+    "name": "交叉熵损失",
+    "description": "分类任务中最常用的损失函数，衡量预测分布与真实分布的差异",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_Hinge损失",
+    "label": "Concept",
+    "name": "Hinge损失",
+    "description": "SVM使用的损失函数，惩罚间隔内的所有预测",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_对数损失",
+    "label": "Concept",
+    "name": "对数损失",
+    "description": "对数几率回归使用的损失函数，等价于交叉熵的二分类形式",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_Huber损失",
+    "label": "Concept",
+    "name": "Huber损失",
+    "description": "结合了MSE和MAE的优点，对异常值更鲁棒",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_超参数",
+    "label": "Concept",
+    "name": "超参数",
+    "description": "在训练之前需要人工设定的模型配置参数",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_学习率",
+    "label": "Concept",
+    "name": "学习率",
+    "description": "控制每次参数更新步幅大小的超参数",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_批大小",
+    "label": "Concept",
+    "name": "批大小",
+    "description": "每次梯度更新使用的样本数量",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_训练轮次",
+    "label": "Concept",
+    "name": "训练轮次",
+    "description": "整个训练集被完整遍历的次数",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_验证集",
+    "label": "Concept",
+    "name": "验证集",
+    "description": "用于调整超参数和模型选择的数据子集，不参与训练",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_特征缩放",
+    "label": "Concept",
+    "name": "特征缩放",
+    "description": "将不同量纲的特征缩放到相近范围，加速收敛",
+    "chapter": ""
+  },
+  {
+    "id": "Method_标准化",
+    "label": "Method",
+    "name": "标准化",
+    "description": "将特征缩放为均值0方差1的分布，也称Z-score归一化",
+    "chapter": ""
+  },
+  {
+    "id": "Method_最小-最大归一化",
+    "label": "Method",
+    "name": "最小-最大归一化",
+    "description": "将特征线性缩放到[0,1]区间",
+    "chapter": ""
+  },
+  {
+    "id": "Method_独热编码",
+    "label": "Method",
+    "name": "独热编码",
+    "description": "将类别变量转化为二进制向量表示",
+    "chapter": ""
+  },
+  {
+    "id": "Method_数据增强",
+    "label": "Method",
+    "name": "数据增强",
+    "description": "通过对已有数据做变换来扩充训练集规模",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_交叉验证调参",
+    "label": "Concept",
+    "name": "交叉验证调参",
+    "description": "用交叉验证评估不同超参数组合的性能",
+    "chapter": ""
+  },
+  {
+    "id": "Method_网格搜索",
+    "label": "Method",
+    "name": "网格搜索",
+    "description": "穷举搜索指定超参数空间的所有组合",
+    "chapter": ""
+  },
+  {
+    "id": "Method_随机搜索",
+    "label": "Method",
+    "name": "随机搜索",
+    "description": "在超参数空间中随机采样进行评估",
+    "chapter": ""
+  },
+  {
+    "id": "Method_贝叶斯优化",
+    "label": "Method",
+    "name": "贝叶斯优化",
+    "description": "用代理模型指导超参数搜索方向的智能调参方法",
+    "chapter": ""
+  },
+  {
+    "id": "Concept_残差连接",
+    "label": "Concept",
+    "name": "残差连接",
+    "description": "将输入直接跳过若干层加到输出上，解决深层网络退化问题",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_ResNet",
+    "label": "Algorithm",
+    "name": "ResNet",
+    "description": "利用残差连接构建的超深卷积网络，ImageNet冠军架构",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_自注意力",
+    "label": "Concept",
+    "name": "自注意力",
+    "description": "序列中每个位置关注所有其他位置来捕获全局依赖",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_多头注意力",
+    "label": "Concept",
+    "name": "多头注意力",
+    "description": "并行运行多组自注意力以捕获不同子空间的关系",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_位置编码",
+    "label": "Concept",
+    "name": "位置编码",
+    "description": "为Transformer输入添加位置信息以弥补无序列归纳偏置",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_BERT",
+    "label": "Algorithm",
+    "name": "BERT",
+    "description": "基于Transformer编码器的预训练语言模型，双向上下文",
+    "chapter": "5"
+  },
+  {
+    "id": "Algorithm_GPT",
+    "label": "Algorithm",
+    "name": "GPT",
+    "description": "基于Transformer解码器的自回归语言模型",
+    "chapter": "5"
+  },
+  {
+    "id": "Method_预训练与微调",
+    "label": "Method",
+    "name": "预训练与微调",
+    "description": "先在大规模数据上预训练，再在下游任务上微调的范式",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_梯度消失",
+    "label": "Concept",
+    "name": "梯度消失",
+    "description": "深层网络中梯度逐层衰减导致浅层参数难以更新",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_梯度爆炸",
+    "label": "Concept",
+    "name": "梯度爆炸",
+    "description": "深层网络中梯度逐层放大导致参数更新不稳定",
+    "chapter": "5"
+  },
+  {
+    "id": "Concept_KKT条件",
+    "label": "Concept",
+    "name": "KKT条件",
+    "description": "约束优化问题最优解的必要条件，SVM对偶问题求解的基础",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_松弛变量",
+    "label": "Concept",
+    "name": "松弛变量",
+    "description": "软间隔SVM中允许样本违反约束的变量",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_惩罚参数C",
+    "label": "Concept",
+    "name": "惩罚参数C",
+    "description": "控制软间隔SVM中误分类惩罚力度的超参数",
+    "chapter": "6"
+  },
+  {
+    "id": "Concept_密度直达",
+    "label": "Concept",
+    "name": "密度直达",
+    "description": "DBSCAN中从核心对象出发直接密度可达的关系",
+    "chapter": "9"
+  },
+  {
+    "id": "Concept_密度可达",
+    "label": "Concept",
+    "name": "密度可达",
+    "description": "DBSCAN中通过密度直达关系传递连接的点集",
+    "chapter": "9"
+  },
+  {
+    "id": "Concept_核心对象",
+    "label": "Concept",
+    "name": "核心对象",
+    "description": "DBSCAN中邻域内点数大于MinPts的数据点",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_OPTICS",
+    "label": "Algorithm",
+    "name": "OPTICS",
+    "description": "DBSCAN的扩展，自动发现不同密度的聚类结构",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_层次聚类-凝聚",
+    "label": "Algorithm",
+    "name": "层次聚类-凝聚",
+    "description": "自底向上逐步合并最近簇的层次聚类方法",
+    "chapter": "9"
+  },
+  {
+    "id": "Algorithm_层次聚类-分裂",
+    "label": "Algorithm",
+    "name": "层次聚类-分裂",
+    "description": "自顶向下逐步分裂的层次聚类方法",
+    "chapter": "9"
+  }
+]

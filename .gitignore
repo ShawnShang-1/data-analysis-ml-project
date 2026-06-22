@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ChromaDB (vector store - built locally)
+chroma_db/
+
+# Ollama models (local only)
+*.bin
+*.gguf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store

@@ -1,0 +1,2879 @@
+[
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "机器学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "数据集"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "样本"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "特征"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "标记"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "训练集"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "测试集"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "假设空间"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "版本空间"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "归纳偏好"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "奥卡姆剃刀"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "没有免费的午餐定理"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Task",
+    "dst_name": "监督学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Task",
+    "dst_name": "无监督学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Task",
+    "dst_name": "回归"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "CONTAINS",
+    "dst_label": "Task",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "过拟合"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "欠拟合"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "泛化能力"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "偏差-方差分解"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "留出法"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "交叉验证"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "自助法"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "准确率"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "精确率"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "召回率"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "F1分数"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "ROC曲线"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "AUC"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "均方误差"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "混淆矩阵"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "线性回归"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "对数几率回归"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "感知机"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "线性判别分析"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "最小二乘法"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "梯度下降"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "正则化"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "超平面"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "ID3"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "C4.5"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "CART"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "信息熵"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "信息增益"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "信息增益比"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "基尼指数"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "剪枝"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "决策树",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "连续值处理"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "多层感知机"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "卷积神经网络"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "循环神经网络"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "LSTM"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "Transformer"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "反向传播"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "激活函数"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "Dropout"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "批归一化"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "迁移学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "软间隔SVM"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "支持向量回归"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "SMO算法"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "间隔"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "支持向量"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "核函数"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "核技巧"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "RBF核"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "朴素贝叶斯"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "贝叶斯网络"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "EM算法"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "贝叶斯定理"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "先验概率"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "后验概率"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "极大似然估计"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "拉普拉斯平滑"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "Bagging"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "随机森林"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "AdaBoost"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "梯度提升"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "XGBoost"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "Stacking"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "集成学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "基学习器"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "多样性"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "集成学习",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "Bootstrap采样"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "K-Means"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "层次聚类"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "DBSCAN"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "高斯混合模型"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "簇"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Metric",
+    "dst_name": "轮廓系数"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "降维与度量学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "PCA"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "降维与度量学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "t-SNE"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "降维与度量学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "KNN"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "降维与度量学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "维度灾难"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "降维与度量学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "流形学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "降维与度量学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "度量学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "特征选择与稀疏学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "LASSO"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "特征选择与稀疏学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "Ridge回归"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "特征选择与稀疏学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "特征选择"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "特征选择与稀疏学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "特征工程"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "特征选择与稀疏学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "稀疏性"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "计算学习理论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "PAC学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "计算学习理论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "VC维"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "计算学习理论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "Rademacher复杂度"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "计算学习理论",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "泛化误差界"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "半监督学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "半监督学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "半监督学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "协同训练"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "半监督学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "自训练"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "半监督学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "图半监督学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "概率图模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "隐马尔可夫模型"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "概率图模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "信念传播"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "概率图模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "MCMC"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "概率图模型",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "变分推断"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "概率图模型",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "概率图模型"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "概率图模型",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "条件随机场"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "规则学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "Apriori"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "规则学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "FP-Growth"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "规则学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "关联规则"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "规则学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "支持度"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "规则学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "置信度"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "强化学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "Q-learning"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "强化学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "DQN"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "强化学习",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "策略梯度"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "强化学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "强化学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "强化学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "马尔可夫决策过程"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "强化学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "Q值函数"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "强化学习",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "探索与利用"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "残差连接"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "ResNet"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "自注意力"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "多头注意力"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "位置编码"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "BERT"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "GPT"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Method",
+    "dst_name": "预训练与微调"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "梯度消失"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "梯度爆炸"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "KKT条件"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "松弛变量"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "支持向量机",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "惩罚参数C"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "密度直达"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "密度可达"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Concept",
+    "dst_name": "核心对象"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "OPTICS"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "层次聚类-凝聚"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "聚类",
+    "type": "CONTAINS",
+    "dst_label": "Algorithm",
+    "dst_name": "层次聚类-分裂"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "模型评估与选择"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "线性模型"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "决策树"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "神经网络"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "支持向量机"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "贝叶斯分类器"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "集成学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "降维与度量学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "线性模型",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "特征选择与稀疏学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "模型评估与选择",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "计算学习理论"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "贝叶斯分类器",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "概率图模型"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "半监督学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "绪论",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "规则学习"
+  },
+  {
+    "src_label": "Chapter",
+    "src_name": "神经网络",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Chapter",
+    "dst_name": "强化学习"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "机器学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Task",
+    "dst_name": "监督学习"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "机器学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Task",
+    "dst_name": "无监督学习"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "数据集",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "样本"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "样本",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "特征"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "样本",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "标记"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "训练集",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "监督学习"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "测试集",
+    "type": "USED_IN",
+    "dst_label": "Method",
+    "dst_name": "留出法"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "过拟合",
+    "type": "COMPARE_WITH",
+    "dst_label": "Concept",
+    "dst_name": "欠拟合"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "泛化能力",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "准确率"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "偏差-方差分解",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "偏差"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "偏差-方差分解",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "方差"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "留出法",
+    "type": "COMPARE_WITH",
+    "dst_label": "Method",
+    "dst_name": "交叉验证"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "交叉验证",
+    "type": "COMPARE_WITH",
+    "dst_label": "Method",
+    "dst_name": "自助法"
+  },
+  {
+    "src_label": "Metric",
+    "src_name": "精确率",
+    "type": "PART_OF",
+    "dst_label": "Metric",
+    "dst_name": "F1分数"
+  },
+  {
+    "src_label": "Metric",
+    "src_name": "召回率",
+    "type": "PART_OF",
+    "dst_label": "Metric",
+    "dst_name": "F1分数"
+  },
+  {
+    "src_label": "Metric",
+    "src_name": "ROC曲线",
+    "type": "PART_OF",
+    "dst_label": "Metric",
+    "dst_name": "AUC"
+  },
+  {
+    "src_label": "Metric",
+    "src_name": "混淆矩阵",
+    "type": "PART_OF",
+    "dst_label": "Metric",
+    "dst_name": "准确率"
+  },
+  {
+    "src_label": "Metric",
+    "src_name": "混淆矩阵",
+    "type": "PART_OF",
+    "dst_label": "Metric",
+    "dst_name": "精确率"
+  },
+  {
+    "src_label": "Metric",
+    "src_name": "混淆矩阵",
+    "type": "PART_OF",
+    "dst_label": "Metric",
+    "dst_name": "召回率"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "线性回归",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "回归"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "对数几率回归",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "感知机",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "线性判别分析",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "最小二乘法",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "线性回归"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "梯度下降",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "线性回归"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "正则化",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "过拟合"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "超平面",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "感知机"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "超平面",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "信息熵",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "ID3"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "信息增益",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "ID3"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "信息增益比",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "C4.5"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "基尼指数",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "CART"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "剪枝",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "预剪枝"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "剪枝",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "后剪枝"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "剪枝",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "过拟合"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "ID3",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "C4.5"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "C4.5",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "CART"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "激活函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "Sigmoid函数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "激活函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "ReLU函数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "激活函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "Tanh函数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "激活函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "Softmax函数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "神经元",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "多层感知机"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "反向传播",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "多层感知机"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "损失函数",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "反向传播"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "卷积神经网络",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "卷积核"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "卷积神经网络",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "池化操作"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "LSTM",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "门控机制"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "GRU",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "门控机制"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "循环神经网络",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "LSTM"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "循环神经网络",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "GRU"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Transformer",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "注意力机制"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "Dropout",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "过拟合"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "多层感知机",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "卷积神经网络"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "多层感知机",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "循环神经网络"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "间隔",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "支持向量",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "SVM",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "软间隔SVM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "核函数",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "核技巧",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "核函数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "RBF核",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "核函数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "多项式核",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "核函数"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "SMO算法",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "SVM",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "支持向量回归",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "回归"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "贝叶斯定理",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "朴素贝叶斯"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "条件独立性假设",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "朴素贝叶斯"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "朴素贝叶斯",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "高斯朴素贝叶斯"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "朴素贝叶斯",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "多项式朴素贝叶斯"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "朴素贝叶斯",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "半朴素贝叶斯"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "朴素贝叶斯",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "拉普拉斯平滑",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "朴素贝叶斯"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "极大似然估计",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "EM算法"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Bagging",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "随机森林"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "AdaBoost",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "梯度提升"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "梯度提升",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "XGBoost"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "梯度提升",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "LightGBM"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Bagging",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "AdaBoost"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "Bootstrap采样",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "Bagging"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "随机森林",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "XGBoost",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "多样性",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "集成学习"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "K-Means",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "层次聚类",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "DBSCAN",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "K-Means",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "DBSCAN"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "簇",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "K-Means"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "K-Means",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "轮廓系数"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "高斯混合模型",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "EM算法"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "PCA",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "核PCA"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "维度灾难",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "流形学习"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "PCA",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "t-SNE"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "KNN",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "分类"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "欧氏距离",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "距离度量"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "曼哈顿距离",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "距离度量"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "余弦相似度",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "距离度量"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "距离度量",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "KNN"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "距离度量",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "K-Means"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "LASSO",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "Ridge回归"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "弹性网络",
+    "type": "PART_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "LASSO"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "弹性网络",
+    "type": "PART_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "Ridge回归"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "过滤式选择",
+    "type": "COMPARE_WITH",
+    "dst_label": "Method",
+    "dst_name": "包裹式选择"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "嵌入式选择",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "LASSO"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "概率图模型",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "有向图模型"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "概率图模型",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "无向图模型"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "隐马尔可夫模型",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "有向图模型"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "信念传播",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "概率图模型"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "MCMC",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "概率图模型"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "变分推断",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "MCMC"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "吉布斯采样",
+    "type": "PART_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "MCMC"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Apriori",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "关联规则"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "FP-Growth",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "关联规则"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Apriori",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "FP-Growth"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "支持度",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "关联规则"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "置信度",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "关联规则"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "强化学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "马尔可夫决策过程"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "Q值函数",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "Q-learning"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Q-learning",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "DQN"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "探索与利用",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "Q-learning"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Q-learning",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "Sarsa"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "DQN",
+    "type": "PART_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "卷积神经网络"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "对数几率回归",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "准确率"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "SVM",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "准确率"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "随机森林",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "准确率"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "K-Means",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "轮廓系数"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "线性回归",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "均方误差"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "半监督学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "协同训练"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "半监督学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "自训练"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "半监督学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "图半监督学习"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "PAC学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "VC维"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "VC维",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "泛化误差界"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "泛化误差界",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "结构风险最小化"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "梯度下降",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Method",
+    "dst_name": "SGD"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "SGD",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Method",
+    "dst_name": "小批量梯度下降"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "SGD",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Method",
+    "dst_name": "动量法"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "动量法",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Method",
+    "dst_name": "Adam优化器"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "Adam优化器",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "多层感知机"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "Adam优化器",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "卷积神经网络"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "Adam优化器",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "Transformer"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "SGD",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "线性回归"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "SGD",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "对数几率回归"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "学习率衰减",
+    "type": "USED_IN",
+    "dst_label": "Method",
+    "dst_name": "Adam优化器"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "早停法",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "过拟合"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "学习率",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "超参数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "批大小",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "超参数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "训练轮次",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "超参数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "学习率",
+    "type": "USED_IN",
+    "dst_label": "Method",
+    "dst_name": "梯度下降"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "验证集",
+    "type": "USED_IN",
+    "dst_label": "Method",
+    "dst_name": "交叉验证"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "验证集",
+    "type": "USED_IN",
+    "dst_label": "Method",
+    "dst_name": "早停法"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "验证集",
+    "type": "COMPARE_WITH",
+    "dst_label": "Concept",
+    "dst_name": "测试集"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "交叉熵损失",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "对数几率回归"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "交叉熵损失",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "多层感知机"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "Hinge损失",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "对数损失",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "对数几率回归"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "Huber损失",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "线性回归"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "交叉熵损失",
+    "type": "COMPARE_WITH",
+    "dst_label": "Concept",
+    "dst_name": "Hinge损失"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "损失函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "交叉熵损失"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "损失函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "Hinge损失"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "损失函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "对数损失"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "损失函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "Huber损失"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "损失函数",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "反向传播"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "均方误差",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "损失函数"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "标准化",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "特征缩放"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "最小-最大归一化",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "特征缩放"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "独热编码",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "特征工程"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "数据增强",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "卷积神经网络"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "特征缩放",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "特征缩放",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "KNN"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "特征缩放",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "PCA"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "特征缩放",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "K-Means"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "特征工程",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "特征选择"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "网格搜索",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "交叉验证调参"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "随机搜索",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "交叉验证调参"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "贝叶斯优化",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "交叉验证调参"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "网格搜索",
+    "type": "COMPARE_WITH",
+    "dst_label": "Method",
+    "dst_name": "随机搜索"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "随机搜索",
+    "type": "COMPARE_WITH",
+    "dst_label": "Method",
+    "dst_name": "贝叶斯优化"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "交叉验证调参",
+    "type": "USED_IN",
+    "dst_label": "Method",
+    "dst_name": "交叉验证"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "惩罚参数C",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "软间隔SVM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "残差连接",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "ResNet"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "ResNet",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "卷积神经网络"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Transformer",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "自注意力"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "自注意力",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "多头注意力"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "自注意力",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "位置编码"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Transformer",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "BERT"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Transformer",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "GPT"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "BERT",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "GPT"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "迁移学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Method",
+    "dst_name": "预训练与微调"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "预训练与微调",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "BERT"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "预训练与微调",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "GPT"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "梯度消失",
+    "type": "COMPARE_WITH",
+    "dst_label": "Concept",
+    "dst_name": "梯度爆炸"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "梯度消失",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "LSTM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "残差连接",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "梯度消失"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "多层感知机",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "ResNet"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "批归一化",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "梯度消失"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "KKT条件",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "对偶问题"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "松弛变量",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "软间隔SVM"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "惩罚参数C",
+    "type": "PART_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "软间隔SVM"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "SVM",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "核PCA"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "核技巧",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "核PCA"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "核心对象",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "密度直达"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "密度直达",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "密度可达"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "DBSCAN",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Concept",
+    "dst_name": "核心对象"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "DBSCAN",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "OPTICS"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "DBSCAN",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "轮廓系数"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "层次聚类-凝聚",
+    "type": "PART_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "层次聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "层次聚类-分裂",
+    "type": "PART_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "层次聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "层次聚类-凝聚",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "层次聚类-分裂"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "OPTICS",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "谱聚类",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "K-Medoids",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "K-Medoids",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "K-Means"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "高斯混合模型",
+    "type": "EVALUATED_BY",
+    "dst_label": "Metric",
+    "dst_name": "Davies-Bouldin指数"
+  },
+  {
+    "src_label": "Metric",
+    "src_name": "Davies-Bouldin指数",
+    "type": "COMPARE_WITH",
+    "dst_label": "Metric",
+    "dst_name": "轮廓系数"
+  },
+  {
+    "src_label": "Metric",
+    "src_name": "纯度",
+    "type": "USED_IN",
+    "dst_label": "Task",
+    "dst_name": "聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "SVM",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "对数几率回归"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "SVM",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "KNN"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "随机森林",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "随机森林",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "KNN"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "卷积神经网络",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "SVM"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "朴素贝叶斯",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "KNN"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "线性回归",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "LASSO"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "线性回归",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "Ridge回归"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "PCA",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "K-Means"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "PCA",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "KNN"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "正则化",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "LASSO"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "正则化",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "Ridge回归"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "正则化",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "XGBoost"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "正则化",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "卷积神经网络"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "XGBoost",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "随机森林"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "LightGBM",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "XGBoost"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "t-SNE",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "K-Means"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "流形学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "t-SNE"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "流形学习",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "LLE"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "距离度量",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "DBSCAN"
+  },
+  {
+    "src_label": "Method",
+    "src_name": "距离度量",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "层次聚类"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "对数几率回归",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "多层感知机"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "线性判别分析",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "PCA"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "条件独立性假设",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "贝叶斯网络"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "EM算法",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "高斯混合模型"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "策略梯度",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "Actor-Critic"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Q-learning",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "Actor-Critic"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "DQN",
+    "type": "PREREQUISITE_OF",
+    "dst_label": "Algorithm",
+    "dst_name": "卷积神经网络"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "值函数",
+    "type": "PART_OF",
+    "dst_label": "Concept",
+    "dst_name": "Q值函数"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "状态",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "马尔可夫决策过程"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "动作",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "马尔可夫决策过程"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "奖励",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "马尔可夫决策过程"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "策略",
+    "type": "USED_IN",
+    "dst_label": "Concept",
+    "dst_name": "马尔可夫决策过程"
+  },
+  {
+    "src_label": "Algorithm",
+    "src_name": "Actor-Critic",
+    "type": "COMPARE_WITH",
+    "dst_label": "Algorithm",
+    "dst_name": "DQN"
+  },
+  {
+    "src_label": "Concept",
+    "src_name": "序列覆盖法",
+    "type": "USED_IN",
+    "dst_label": "Algorithm",
+    "dst_name": "Apriori"
+  }
+]
