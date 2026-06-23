@@ -188,7 +188,9 @@ class VectorSearch:
         if not new_ids:
             return 0
 
-        new_indices = [ids.index(id) for id in new_ids]
+        # O(1) 查找：先构建 {id: index} 字典
+        id_to_idx = {id: i for i, id in enumerate(ids)}
+        new_indices = [id_to_idx[id] for id in new_ids]
         self.collection.add(
             ids=[ids[i] for i in new_indices],
             documents=[documents[i] for i in new_indices],

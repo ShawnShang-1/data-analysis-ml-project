@@ -17,5 +17,19 @@ chroma_db/
 .idea/
 *.swp
 
+# Environment variables (contains secrets)
+.env
+
+# Generated digital human files
+digital_human/audio/
+digital_human/videos/
+
+# Wav2Lip generated outputs
+windows_wav2lip/outputs/
+windows_wav2lip/temp/
+
+# Node
+node_modules/
+
 # OS
 .DS_Store

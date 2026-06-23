@@ -61,9 +61,13 @@ class RAGEngine:
         self.graph_querier = get_graph_querier()
 
     def retrieve(self, question: str) -> dict:
-        """双通道检索"""
-        vector_results = self.vector_search.search(question, top_k=TOP_K_VECTOR)
-        graph_context = self.graph_querier.retrieve_for_rag(question, top_k=TOP_K_GRAPH)
+        """双通道检索（并行执行向量检索和图谱检索）"""
+        import concurrent.futures
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+            vector_future = executor.submit(self.vector_search.search, question, TOP_K_VECTOR)
+            graph_future = executor.submit(self.graph_querier.retrieve_for_rag, question, TOP_K_GRAPH)
+            vector_results = vector_future.result()
+            graph_context = graph_future.result()
         return {
             "vector_raw": vector_results,
             "graph_context": graph_context,
@@ -217,16 +221,21 @@ class RAGEngine:
                 },
             ) as response:
                 async for line in response.aiter_lines():
-                    if line:
+                    if not line:
+                        continue
+                    try:
                         data = json.loads(line)
-                        if "response" in data:
-                            yield {
-                                "type": "token",
-                                "content": data["response"],
-                            }
-                        if data.get("done"):
-                            yield {"type": "done"}
-                            break
+                    except json.JSONDecodeError:
+                        # 跳过非 JSON 行（keep-alive、错误消息等）
+                        continue
+                    if "response" in data:
+                        yield {
+                            "type": "token",
+                            "content": data["response"],
+                        }
+                    if data.get("done"):
+                        yield {"type": "done"}
+                        break
 
 
 def _strip_think_tags(text: str) -> str:

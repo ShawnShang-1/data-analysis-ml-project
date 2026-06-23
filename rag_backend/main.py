@@ -1,18 +1,26 @@
 """
-FastAPI 主服务 — 提供 RAG 对话、图谱查询、文档导入等 API
+FastAPI 主服务 — 提供 RAG 对话、图谱查询、文档导入、数字人等 API
 """
 import json
+import sys
 import asyncio
+from pathlib import Path
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
+from typing import Literal
 from sse_starlette.sse import EventSourceResponse
 
-from config import HOST, PORT
+from config import HOST, PORT, CORS_ORIGINS, NEO4J_URI, OLLAMA_BASE_URL, CHROMA_DIR, MAX_QUESTION_LENGTH
 from rag_engine import get_rag_engine
 from graph_query import get_graph_querier
 from vector_search import get_vector_search
+
+# 添加数字人模块路径
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from digital_human import router as digital_human_router
 
 
 # ── 生命周期管理 ──
@@ -22,9 +30,15 @@ async def lifespan(app: FastAPI):
     """启动和关闭时的资源管理"""
     # 启动
     print("🚀 RAG 服务启动中...")
-    print(f"   Neo4j: bolt://localhost:7687")
-    print(f"   Ollama: http://localhost:11434")
-    print(f"   ChromaDB: ./chroma_db")
+    print(f"   Neo4j: {NEO4J_URI}")
+    print(f"   Ollama: {OLLAMA_BASE_URL}")
+    print(f"   ChromaDB: {CHROMA_DIR}")
+    print(f"   CORS origins: {CORS_ORIGINS}")
+
+    # 启动文件清理后台任务
+    from digital_human.file_cleanup import start_cleanup_background
+    start_cleanup_background()
+
     yield
     # 关闭
     querier = get_graph_querier()
@@ -39,20 +53,28 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS 中间件（允许前端跨域访问）
+# CORS 中间件（限制允许的前端来源）
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
+    allow_origins=CORS_ORIGINS,
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
+
+# 注册数字人路由
+app.include_router(digital_human_router)
+
+# 前端静态文件（如果存在）
+frontend_dir = Path(__file__).parent.parent / "frontend"
+if frontend_dir.exists():
+    app.mount("/ui", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")
 
 
 # ── 请求/响应模型 ──
 
 class ChatRequest(BaseModel):
-    question: str
+    question: str = Field(..., max_length=MAX_QUESTION_LENGTH, description="用户问题")
     stream: bool = True
 
 class ChatResponse(BaseModel):
@@ -66,8 +88,8 @@ class IngestResponse(BaseModel):
     total: int
 
 class GraphQueryRequest(BaseModel):
-    query_type: str  # search | prerequisites | related | chapter | path
-    params: dict
+    query_type: Literal["search", "prerequisites", "related", "chapter", "path", "task_algorithms"]
+    params: dict = Field(default_factory=dict)
 
 
 # ── API 路由 ──
@@ -77,7 +99,11 @@ async def root():
     return {
         "status": "running",
         "service": "ML知识问答 RAG 系统",
-        "endpoints": ["/chat", "/chat/stream", "/graph/query", "/ingest", "/stats"],
+        "endpoints": [
+            "/chat", "/chat/stream", "/graph/query", "/ingest", "/stats",
+            "/digital_human/speak", "/digital_human/tts", "/digital_human/voices",
+            "/digital_human/expressions", "/digital_human/viseme_map",
+        ],
     }
 
 

@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Atlas — 机器学习智能助教</title>
+
+<!-- KaTeX 公式渲染 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<!-- 字体：Fraunces 衬线标题 + Inter Tight 正文 + JetBrains Mono 代码 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============ 设计令牌 ============ */
+:root {
+  /* 暖墨深色系 — 非紫色，非纯黑 */
+  --bg: #0f0e0c;
+  --bg-elevated: #16140f;
+  --surface: #1c1915;
+  --surface-hover: #232017;
+  --border: #2a2620;
+  --border-light: #3a352c;
+
+  /* 文字 — 暖色调，非冷白 */
+  --text: #f4ede0;
+  --text-secondary: #a8a094;
+  --text-muted: #6b6557;
+
+  /* 点缀色 — 琥珀/藏红，非紫色 */
+  --accent: #e8a838;
+  --accent-dim: #8a6d2a;
+  --accent-glow: rgba(232, 168, 56, 0.12);
+  --accent-bg: rgba(232, 168, 56, 0.06);
+
+  /* 功能色 */
+  --sage: #7a9b6e;
+  --teal: #6db4ad;
+  --crimson: #c97064;
+
+  /* 字体 */
+  --font-serif: 'Fraunces', 'Noto Serif SC', Georgia, serif;
+  --font-sans: 'Inter Tight', 'Noto Sans SC', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Noto Sans Mono', 'SF Mono', Consolas, monospace;
+
+  /* 间距 */
+  --gap: 1px;
+  --radius: 3px;
+  --radius-sm: 2px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* 微妙的网格纹理背景 */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(232, 168, 56, 0.025) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============ 主布局 ============ */
+.app-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 340px;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============ 通用：侧栏 ============ */
+.sidebar-left, .sidebar-right {
+  background: var(--bg-elevated);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.sidebar-right { border-right: none; border-left: 1px solid var(--border); }
+
+.sidebar-header {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-header h2 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.sidebar-header .label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ============ 左侧：知识图谱 ============ */
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.graph-section {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  padding: 16px 20px 6px;
+}
+
+.graph-node {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border-left: 2px solid transparent;
+  position: relative;
+}
+.graph-node:hover {
+  background: var(--surface);
+  border-left-color: var(--accent-dim);
+}
+.graph-node.active {
+  background: var(--accent-bg);
+  border-left-color: var(--accent);
+}
+.graph-node .marker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  width: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+.graph-node .name {
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 400;
+}
+.graph-node .type {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+/* ============ 中间：对话区 ============ */
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+.chat-header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.chat-header h1 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+.chat-header .subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+.chat-header .subtitle::before {
+  content: '— ';
+  color: var(--accent);
+}
+
+.chat-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.status-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  box-shadow: 0 0 8px var(--sage);
+}
+.status-dot.thinking {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: pulse 1.2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ============ 消息列表 ============ */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 0;
+}
+
+.message {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  display: flex;
+  gap: 16px;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.msg-avatar {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: 32px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.message.user .msg-avatar { color: var(--teal); }
+.message.assistant .msg-avatar { color: var(--accent); }
+
+.msg-content {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+}
+.msg-content p { margin-bottom: 10px; }
+.msg-content strong { color: var(--accent); font-weight: 600; }
+.msg-content em { color: var(--text-secondary); font-style: italic; }
+
+/* 行内代码 */
+.msg-content code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--surface);
+  color: var(--teal);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+/* 代码块 */
+.msg-content pre {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+.msg-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* 列表 */
+.msg-content ul, .msg-content ol {
+  margin: 8px 0 12px 20px;
+}
+.msg-content li { margin-bottom: 4px; }
+
+/* 标题 */
+.msg-content h1, .msg-content h2, .msg-content h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  margin: 16px 0 8px;
+  color: var(--text);
+}
+.msg-content h1 { font-size: 18px; }
+.msg-content h2 { font-size: 16px; }
+.msg-content h3 { font-size: 14px; color: var(--accent); }
+
+/* KaTeX 公式样式 */
+.msg-content .katex {
+  font-size: 1.05em;
+  color: var(--text);
+}
+.msg-content .katex-display {
+  margin: 16px 0;
+  padding: 16px 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+.msg-content .katex-display > .katex {
+  font-size: 1.15em;
+}
+
+/* KaTeX 未加载时的占位公式样式 */
+.msg-content .math-pending {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+  font-size: 0.95em;
+}
+.msg-content .math-block {
+  display: block;
+  margin: 16px 0;
+  padding: 14px 18px;
+  border-left: 2px solid var(--accent);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* 来源标记 */
+.sources-badge {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-light);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.sources-badge::before {
+  content: '↳ ';
+  color: var(--accent);
+}
+
+/* 打字光标 */
+.typing-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 15px;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.9s infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* 加载点 */
+.loading-dots { display: inline-flex; gap: 4px; align-items: center; }
+.loading-dots span {
+  width: 5px; height: 5px;
+  background: var(--accent);
+  animation: bounce 1.4s infinite both;
+}
+.loading-dots span:nth-child(1) { animation-delay: -.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -.16s; }
+@keyframes bounce {
+  0%,80%,100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* ============ 输入区 ============ */
+.input-area {
+  border-top: 1px solid var(--border);
+  padding: 12px 28px 20px;
+  background: var(--bg-elevated);
+}
+
+.input-suggestions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.suggestion-chip {
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: var(--font-sans);
+}
+.suggestion-chip:hover {
+  border-color: var(--accent-dim);
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 8px 8px 16px;
+  transition: border-color 0.2s;
+}
+.input-row:focus-within {
+  border-color: var(--accent-dim);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.input-row textarea {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  max-height: 100px;
+}
+.input-row textarea::placeholder { color: var(--text-muted); }
+
+.btn-send {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+.btn-send:hover { background: #f0b848; }
+.btn-send:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ============ 右侧：数字人 ============ */
+.digital-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.digital-header h2 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+}
+.digital-header .sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 3px;
+}
+.digital-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.digital-badge.speaking { color: var(--accent); }
+.digital-badge span:first-child {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 6px currentColor;
+}
+
+/* 数字人舞台 */
+.avatar-stage {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-frame {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px var(--accent-glow);
+}
+
+.avatar-img, .avatar-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.mouth-img { transition: opacity 0.08s ease; }
+.avatar-img.expression { transition: opacity 0.5s ease; }
+.avatar-video { transition: opacity 0.1s ease; }
+
+/* 呼吸动画 */
+.avatar-frame.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.008); }
+}
+.avatar-frame.talking {
+  animation: talkBob 1.2s ease-in-out infinite;
+}
+@keyframes talkBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+.avatar-frame.listening {
+  animation: microTurn 6s ease-in-out infinite;
+}
+@keyframes microTurn {
+  0%, 100% { transform: rotate(0deg); }
+  33% { transform: rotate(0.8deg); }
+  66% { transform: rotate(-0.8deg); }
+}
+@keyframes nod {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(2deg); }
+  60% { transform: rotate(-1deg); }
+}
+
+/* 表情标签 */
+.expr-label {
+  position: absolute;
+  bottom: 10px; left: 10px;
+  background: rgba(15, 14, 12, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.expr-label .dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--sage);
+}
+.expr-label.speaking .dot {
+  background: var(--accent);
+  animation: pulse 1s infinite;
+}
+
+/* 说话进度条 */
+.speak-bar-wrap {
+  width: 200px;
+  height: 2px;
+  background: var(--border);
+  margin-top: 16px;
+  border-radius: 1px;
+  overflow: hidden;
+}
+.speak-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.1s linear;
+}
+
+/* 控制面板 */
+.digital-controls {
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--border);
+}
+.ctrl-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.ctrl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+.ctrl-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 7px 4px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: var(--font-sans);
+}
+.ctrl-btn:hover {
+  border-color: var(--accent-dim);
+  color: var(--text);
+}
+.ctrl-btn.active {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.vol-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.vol-row input[type="range"] {
+  flex: 1;
+  height: 2px;
+  -webkit-appearance: none;
+  background: var(--border);
+  border-radius: 1px;
+  outline: none;
+}
+.vol-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px; height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 播放按钮覆盖层 */
+.play-btn {
+  position: absolute;
+  bottom: 50px; left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  z-index: 10;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============ 滚动条 ============ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
+
+/* ============ 响应式 ============ */
+@media (max-width: 1280px) {
+  .app-container { grid-template-columns: 1fr 320px; }
+  .sidebar-left { display: none; }
+}
+@media (max-width: 900px) {
+  .app-container { grid-template-columns: 1fr 280px; }
+  .avatar-frame { width: 200px; height: 270px; }
+  .speak-bar-wrap { width: 180px; }
+}
+@media (max-width: 480px) {
+  .app-container { grid-template-columns: 1fr; }
+  .sidebar-right { display: none; }
+  .input-suggestions { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="app-container">
+
+<!-- ============ 左侧：知识图谱 ============ -->
+<aside class="sidebar-left">
+  <div class="sidebar-header">
+    <h2>Knowledge Atlas</h2>
+    <div class="label">知识图谱 / 点击提问</div>
+  </div>
+  <div class="sidebar-content">
+    <div class="graph-section">— Algorithms</div>
+    <div class="graph-node" data-concept="支持向量机" onclick="askConcept(this)"><div class="marker">01</div><div><div class="name">支持向量机</div><div class="type">Algorithm</div></div></div>
+    <div class="graph-node" data-concept="决策树" onclick="askConcept(this)"><div class="marker">02</div><div><div class="name">决策树</div><div class="type">Algorithm</div></div></div>
+    <div class="graph-node" data-concept="梯度下降" onclick="askConcept(this)"><div class="marker">03</div><div><div class="name">梯度下降</div><div class="type">Algorithm</div></div></div>
+    <div class="graph-node" data-concept="K-means" onclick="askConcept(this)"><div class="marker">04</div><div><div class="name">K-means 聚类</div><div class="type">Algorithm</div></div></div>
+    <div class="graph-node" data-concept="PCA" onclick="askConcept(this)"><div class="marker">05</div><div><div class="name">主成分分析</div><div class="type">Algorithm</div></div></div>
+    <div class="graph-section">— Concepts</div>
+    <div class="graph-node" data-concept="深度学习" onclick="askConcept(this)"><div class="marker">06</div><div><div class="name">深度学习</div><div class="type">Concept</div></div></div>
+    <div class="graph-node" data-concept="过拟合" onclick="askConcept(this)"><div class="marker">07</div><div><div class="name">过拟合</div><div class="type">Concept</div></div></div>
+    <div class="graph-node" data-concept="集成学习" onclick="askConcept(this)"><div class="marker">08</div><div><div class="name">集成学习</div><div class="type">Concept</div></div></div>
+    <div class="graph-section">— Models</div>
+    <div class="graph-node" data-concept="神经网络" onclick="askConcept(this)"><div class="marker">09</div><div><div class="name">神经网络</div><div class="type">Model</div></div></div>
+    <div class="graph-node" data-concept="随机森林" onclick="askConcept(this)"><div class="marker">10</div><div><div class="name">随机森林</div><div class="type">Model</div></div></div>
+  </div>
+</aside>
+
+<!-- ============ 中间：对话区 ============ -->
+<main class="chat-area">
+  <header class="chat-header">
+    <div class="chat-header-left">
+      <h1>ML Atlas</h1>
+      <div class="subtitle">机器学习智能助教 / RAG + 知识图谱</div>
+    </div>
+    <div class="chat-status">
+      <span class="status-dot" id="dot"></span>
+      <span id="status">就绪</span>
+    </div>
+  </header>
+
+  <div class="messages" id="msgs">
+    <div class="message assistant">
+      <div class="msg-avatar">AI</div>
+      <div class="msg-content">
+        <p>你好，我是 <strong>ML Atlas</strong>，你的机器学习课程助教。</p>
+        <p>我结合知识图谱与教材检索为你答疑。右侧数字人会同步讲解。试试问我：</p>
+        <p><code>什么是支持向量机？</code> 或点击左侧节点快速提问。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-area">
+    <div class="input-suggestions">
+      <span class="suggestion-chip" onclick="quickAsk('什么是支持向量机？')">什么是支持向量机？</span>
+      <span class="suggestion-chip" onclick="quickAsk('解释梯度下降的原理')">梯度下降原理</span>
+      <span class="suggestion-chip" onclick="quickAsk('如何解决过拟合问题？')">如何解决过拟合？</span>
+      <span class="suggestion-chip" onclick="quickAsk('随机森林和决策树的区别')">随机森林 vs 决策树</span>
+    </div>
+    <div class="input-row">
+      <textarea id="q" placeholder="输入问题，Enter 发送..." rows="1" onkeydown="onKey(event)" oninput="autoH(this)"></textarea>
+      <button class="btn-send" id="send" onclick="send()">→</button>
+    </div>
+  </div>
+</main>
+
+<!-- ============ 右侧：数字人 ============ -->
+<aside class="sidebar-right">
+  <div class="digital-header">
+    <div>
+      <h2>小智 · Instructor</h2>
+      <div class="sub">数字人讲解员</div>
+    </div>
+    <div class="digital-badge" id="dh-badge"><span></span><span id="dh-status">在线</span></div>
+  </div>
+
+  <div class="avatar-stage">
+    <div class="avatar-frame breathe" id="avatar-frame">
+      <img class="avatar-img mouth-img" id="mouth-closed"
+           src="/digital_human/assets/teacher_professional.jpg"
+           alt="数字人教师"
+           style="z-index:1; opacity:1;"
+           onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22340%22><rect fill=%22%231c1915%22 width=%22260%22 height=%22340%22/><text x=%22130%22 y=%22180%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23e8a838%22 font-family=%22monospace%22>AI</text></svg>'">
+      <img class="avatar-img mouth-img" id="mouth-open"
+           src="/digital_human/assets/teacher_speaking.jpg"
+           alt="数字人教师"
+           style="z-index:2; opacity:0;"
+           onerror="this.style.opacity='0'">
+      <img class="avatar-img mouth-img" id="mouth-wide"
+           src="/digital_human/assets/teacher_wide_open.jpg"
+           alt="数字人教师"
+           style="z-index:3; opacity:0;"
+           onerror="this.style.opacity='0'">
+      <img class="avatar-img expression" id="img-expr"
+           alt="表情"
+           style="z-index:4; opacity:0;"
+           onerror="this.style.opacity='0'">
+      <video class="avatar-video" id="dh-video"
+             style="z-index:5; opacity:0;"
+             playsinline muted
+             onended="onVideoEnded()"></video>
+      <div class="expr-label" id="expr-label">
+        <span class="dot"></span><span id="expr-text">待机</span>
+      </div>
+    </div>
+    <div class="speak-bar-wrap">
+      <div class="speak-bar" id="speak-bar"></div>
+    </div>
+  </div>
+
+  <div class="digital-controls">
+    <div class="ctrl-title">— Expression</div>
+    <div class="ctrl-grid">
+      <button class="ctrl-btn" data-expr="smiling" onclick="setExpr('smiling')">微笑</button>
+      <button class="ctrl-btn active" data-expr="explaining" onclick="setExpr('explaining')">讲解</button>
+      <button class="ctrl-btn" data-expr="thinking" onclick="setExpr('thinking')">思考</button>
+      <button class="ctrl-btn" data-expr="surprised" onclick="setExpr('surprised')">惊讶</button>
+      <button class="ctrl-btn" data-expr="focusing" onclick="setExpr('focusing')">专注</button>
+      <button class="ctrl-btn" data-expr="nodding" onclick="setExpr('nodding')">点头</button>
+    </div>
+    <div class="vol-row">
+      <span>VOL</span>
+      <input type="range" min="0" max="100" value="90" oninput="setVol(this.value)">
+      <span id="vol-txt">90</span>
+    </div>
+  </div>
+</aside>
+
+</div>
+
+<script>
+// ===== 配置 =====
+const CHAT = '/chat/stream';
+const DIGITAL = '/digital_human/speak';
+const DIGITAL_VIDEO = '/digital_human/speak_video';
+const WAV2LIP_STATUS = '/digital_human/wav2lip_status';
+const BASE_URL = '/digital_human/assets';
+
+// ===== 状态 =====
+let curExpr = 'explaining';
+let audio = null;
+let timer = null;
+let duration = 0;
+let playing = false;
+let volume = .9;
+let thinking = false;
+let wav2lipAvailable = false;
+
+// ===== DOM 引用 =====
+const $ = id => document.getElementById(id);
+const msgs = $('msgs'), input = $('q'), sendBtn = $('send');
+const dot = $('dot'), statusTxt = $('status');
+const frame = $('avatar-frame');
+const imgClosed = $('mouth-closed'), imgOpen = $('mouth-open'), imgWide = $('mouth-wide');
+const imgExpr = $('img-expr');
+const exprLabel = $('expr-label'), exprText = $('expr-text');
+const bar = $('speak-bar');
+const badge = $('dh-badge'), dhStatus = $('dh-status');
+const dhVideo = $('dh-video');
+
+// ===== Markdown + LaTeX 渲染 =====
+// KaTeX 可能尚未加载（defer），提供安全降级
+function renderMath(formula, displayMode) {
+  if (typeof katex === 'undefined') {
+    // KaTeX 未就绪：用样式化占位符，等加载后统一重渲染
+    const cls = displayMode ? 'math-pending math-block' : 'math-pending math-inline';
+    return `<span class="${cls}" data-formula="${encodeURIComponent(formula)}" data-display="${displayMode}">${escapeHtml(formula)}</span>`;
+  }
+  try {
+    return katex.renderToString(formula, {displayMode, throwOnError: false});
+  } catch(e) {
+    return '<code>' + escapeHtml(formula) + '</code>';
+  }
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// KaTeX 加载完成后，重渲染所有待处理公式
+function rerenderPendingMath() {
+  if (typeof katex === 'undefined') return;
+  document.querySelectorAll('.math-pending').forEach(el => {
+    const formula = decodeURIComponent(el.dataset.formula || '');
+    const displayMode = el.dataset.display === 'true';
+    try {
+      const html = katex.renderToString(formula, {displayMode, throwOnError: false});
+      const tmp = document.createElement('div'); tmp.innerHTML = html;
+      el.replaceWith(tmp.firstChild);
+    } catch(e) { /* 忽略 */ }
+  });
+}
+
+function fmt(t) {
+  if (!t) return '';
+  // 1. 提取代码块（避免内部内容被处理）
+  const codeBlocks = [];
+  t = t.replace(/```(\w*)\n?([\s\S]*?)```/g, (m, lang, code) => {
+    codeBlocks.push({lang, code});
+    return `\x00CB${codeBlocks.length - 1}\x00`;
+  });
+
+  // 2. 提取块级公式 $$...$$
+  const blockMath = [];
+  t = t.replace(/\$\$([\s\S]+?)\$\$/g, (m, formula) => {
+    blockMath.push(formula);
+    return `\x00BM${blockMath.length - 1}\x00`;
+  });
+
+  // 3. 提取行内公式 $...$
+  const inlineMath = [];
+  t = t.replace(/\$([^\$\n]+?)\$/g, (m, formula) => {
+    inlineMath.push(formula);
+    return `\x00IM${inlineMath.length - 1}\x00`;
+  });
+
+  // 4. HTML 转义
+  t = escapeHtml(t);
+
+  // 5. Markdown 处理
+  // 标题
+  t = t.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  t = t.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  t = t.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+  // 粗体
+  t = t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  // 斜体
+  t = t.replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em>$1</em>');
+  // 行内代码
+  t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
+  // 列表
+  t = t.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>');
+  t = t.replace(/(<li>.*<\/li>\n?)+/g, m => '<ul>' + m + '</ul>');
+  // 段落和换行
+  t = t.replace(/\n\n/g, '</p><p>');
+  t = t.replace(/\n/g, '<br>');
+  t = '<p>' + t + '</p>';
+  // 清理空段落
+  t = t.replace(/<p>\s*<\/p>/g, '');
+
+  // 6. 还原代码块
+  t = t.replace(/\x00CB(\d+)\x00/g, (m, i) => {
+    const cb = codeBlocks[parseInt(i)];
+    return `<pre><code class="language-${cb.lang || 'plaintext'}">${escapeHtml(cb.code)}</code></pre>`;
+  });
+
+  // 7. 还原并渲染公式（安全降级）
+  t = t.replace(/\x00BM(\d+)\x00/g, (m, i) => renderMath(blockMath[parseInt(i)], true));
+  t = t.replace(/\x00IM(\d+)\x00/g, (m, i) => renderMath(inlineMath[parseInt(i)], false));
+
+  return t;
+}
+
+// ===== 嘴型映射 =====
+function visemeToImage(viseme) {
+  if (!viseme) return 'closed';
+  if (viseme === 'sil' || viseme === 'm') return 'closed';
+  if (viseme === 'aa' || viseme === 'o') return 'wide';
+  return 'open';
+}
+
+let currentMouth = 'closed';
+
+function switchMouthImage(viseme) {
+  const target = visemeToImage(viseme);
+  if (target === currentMouth) return;
+  currentMouth = target;
+  imgClosed.style.opacity = (target === 'closed') ? '1' : '0';
+  imgOpen.style.opacity = (target === 'open') ? '1' : '0';
+  imgWide.style.opacity = (target === 'wide') ? '1' : '0';
+}
+
+function resetMouth() {
+  currentMouth = 'closed';
+  imgClosed.style.opacity = '1';
+  imgOpen.style.opacity = '0';
+  imgWide.style.opacity = '0';
+}
+
+// ===== 表情 =====
+const EXPR_IMG = {
+  smiling: 'expression_smiling.jpg',
+  explaining: 'teacher_professional.jpg',
+  thinking: 'expression_thinking.jpg',
+  surprised: 'expression_surprised.jpg',
+  focusing: 'expression_focusing.jpg',
+  nodding: 'expression_nodding.jpg',
+};
+const exprNames = {
+  smiling:'微笑', explaining:'讲解中', thinking:'思考中',
+  surprised:'惊讶', focusing:'专注倾听', nodding:'点头认可'
+};
+
+function setExpr(e) {
+  if (!exprNames[e]) return;
+  curExpr = e;
+  exprText.textContent = exprNames[e];
+  document.querySelectorAll('.ctrl-btn[data-expr]').forEach(b =>
+    b.classList.toggle('active', b.dataset.expr === e)
+  );
+  if (e === 'explaining') {
+    imgExpr.style.opacity = '0';
+    imgClosed.style.opacity = '1';
+    imgOpen.style.opacity = '0';
+    imgWide.style.opacity = '0';
+    currentMouth = 'closed';
+  } else {
+    imgExpr.src = BASE_URL + '/' + EXPR_IMG[e];
+    imgExpr.style.opacity = '1';
+    imgClosed.style.opacity = '0';
+    imgOpen.style.opacity = '0';
+    imgWide.style.opacity = '0';
+  }
+  if (e === 'nodding') {
+    frame.style.animation = 'nod .6s ease';
+    setTimeout(() => { frame.style.animation = ''; frame.classList.add('breathe'); }, 600);
+  }
+  if (e === 'focusing') frame.classList.add('listening');
+  else frame.classList.remove('listening');
+  resetMouth();
+}
+
+function setSpeaking(on) {
+  if (on) {
+    frame.classList.add('talking');
+    frame.classList.remove('breathe');
+    exprLabel.classList.add('speaking');
+    badge.classList.add('speaking');
+    dhStatus.textContent = '讲解中';
+  } else {
+    frame.classList.remove('talking');
+    frame.classList.add('breathe');
+    exprLabel.classList.remove('speaking');
+    badge.classList.remove('speaking');
+    dhStatus.textContent = '在线';
+    resetMouth();
+  }
+}
+
+function stopAnim() {
+  playing = false;
+  if (timer) { cancelAnimationFrame(timer); timer = null; }
+  setSpeaking(false);
+  bar.style.width = '0%';
+  resetMouth();
+}
+
+function runAnim(visemeTimeline, dur) {
+  playing = true;
+  duration = dur;
+  const start = performance.now();
+  setSpeaking(true);
+  let visemeIdx = 0;  // O(1) 指针推进
+
+  function tick() {
+    if (!playing) { setSpeaking(false); resetMouth(); return; }
+    const elapsed = (performance.now() - start) / 1000;
+    if (elapsed >= dur) {
+      bar.style.width = '100%';
+      setTimeout(() => {
+        bar.style.width = '0%';
+        playing = false;
+        setSpeaking(false);
+        resetMouth();
+        setExpr('smiling');
+      }, 500);
+      return;
+    }
+    bar.style.width = (elapsed / dur * 100) + '%';
+    if (visemeTimeline && visemeTimeline.length > 0) {
+      // 指针推进，不回头扫描
+      while (visemeIdx < visemeTimeline.length - 1 && visemeTimeline[visemeIdx + 1].time <= elapsed) {
+        visemeIdx++;
+      }
+      const curViseme = visemeTimeline[visemeIdx]?.viseme || 'rest';
+      switchMouthImage(curViseme);
+    } else {
+      const alt = Math.sin(elapsed * 4) > 0 ? 'rest' : 'aa';
+      switchMouthImage(alt);
+    }
+    timer = requestAnimationFrame(tick);
+  }
+  timer = requestAnimationFrame(tick);
+}
+
+// ===== 音频 =====
+function setVol(v) { volume = v / 100; $('vol-txt').textContent = v; if (audio) audio.volume = volume; }
+
+function playAudio(url, visemeTimeline, dur) {
+  if (audio) { audio.pause(); audio = null; }
+  stopAnim();
+  audio = new Audio(url);
+  audio.volume = volume;
+  audio.onplay = () => { setExpr('explaining'); runAnim(visemeTimeline, dur); };
+  audio.onended = () => { stopAnim(); resetMouth(); setExpr('smiling'); audio = null; };
+  audio.onerror = () => { console.warn('音频播放失败'); stopAnim(); resetMouth(); };
+  setExpr('explaining');
+  runAnim(visemeTimeline, dur);
+  audio.play().catch(e => {
+    console.warn('自动播放被阻止:', e);
+    const btn = document.createElement('button');
+    btn.className = 'play-btn';
+    btn.textContent = '▶ 点击播放';
+    btn.onclick = function() {
+      this.remove();
+      audio = new Audio(url);
+      audio.volume = volume;
+      audio.onplay = () => runAnim(visemeTimeline, dur);
+      audio.onended = () => { stopAnim(); resetMouth(); setExpr('smiling'); audio = null; };
+      audio.play();
+    };
+    frame.appendChild(btn);
+  });
+}
+
+// ===== Wav2Lip 视频 =====
+let progressTimer = null;
+
+function playVideo(videoUrl, audioUrl, visemeTimeline, dur) {
+  if (audio) { audio.pause(); audio = null; }
+  stopAnim();
+  if (progressTimer) { cancelAnimationFrame(progressTimer); progressTimer = null; }
+  resetMouth();
+  imgExpr.style.opacity = '0';
+  dhVideo.src = videoUrl;
+  dhVideo.style.opacity = '1';
+  setSpeaking(true);
+  setExpr('explaining');
+  const start = performance.now();
+  const updateProgress = () => {
+    const elapsed = (performance.now() - start) / 1000;
+    if (elapsed >= dur) {
+      bar.style.width = '100%';
+      progressTimer = null;
+    } else {
+      bar.style.width = (elapsed / dur * 100) + '%';
+      progressTimer = requestAnimationFrame(updateProgress);
+    }
+  };
+  progressTimer = requestAnimationFrame(updateProgress);
+  audio = new Audio(audioUrl);
+  audio.volume = volume;
+  audio.onended = () => { onVideoEnded(); };
+  audio.onerror = () => { console.warn('音频播放失败'); onVideoEnded(); };
+  dhVideo.currentTime = 0;
+  dhVideo.play().catch(e => { console.warn('视频播放失败:', e); onVideoEnded(); });
+  audio.play().catch(e => { console.warn('音频播放失败:', e); onVideoEnded(); });
+}
+
+function onVideoEnded() {
+  if (progressTimer) { cancelAnimationFrame(progressTimer); progressTimer = null; }
+  dhVideo.style.opacity = '0';
+  dhVideo.pause();
+  dhVideo.src = '';
+  if (audio) { audio.pause(); audio = null; }
+  stopAnim();
+  resetMouth();
+  setExpr('smiling');
+  bar.style.width = '0%';
+}
+
+async function checkWav2Lip() {
+  try {
+    const res = await fetch(WAV2LIP_STATUS);
+    if (res.ok) {
+      const data = await res.json();
+      wav2lipAvailable = data.available === true;
+      if (wav2lipAvailable) console.log('[Wav2Lip] 服务可用 - GPU:', data.gpu);
+    }
+  } catch (e) { wav2lipAvailable = false; }
+}
+
+// ===== 消息 =====
+function addMsg(type, html, sources) {
+  const el = document.createElement('div');
+  el.className = 'message ' + type;
+  el.innerHTML = `<div class="msg-avatar">${type === 'user' ? 'YOU' : 'AI'}</div><div class="msg-content">${html}${sources?.length ? '<div class="sources-badge">来源：' + sources.map(s => fmt(s)).join('、') + '</div>' : ''}</div>`;
+  msgs.appendChild(el);
+  msgs.scrollTop = msgs.scrollHeight;
+  return el.querySelector('.msg-content');
+}
+
+function autoH(el) { el.style.height = 'auto'; el.style.height = Math.min(el.scrollHeight, 100) + 'px'; }
+
+// ===== 发送 =====
+let abortController = null;
+
+async function send() {
+  const q = input.value.trim();
+  if (!q || sendBtn.disabled) return;
+  input.value = ''; input.style.height = 'auto'; input.disabled = true;
+  sendBtn.disabled = true; sendBtn.textContent = '·'; thinking = true;
+  setStatus('思考中');
+  addMsg('user', fmt(q));
+  const cEl = addMsg('assistant', '<span class="loading-dots"><span></span><span></span><span></span></span>');
+  let answer = '';
+  abortController = new AbortController();
+  const timeoutId = setTimeout(() => abortController.abort(), 60000);
+
+  try {
+    const res = await fetch(CHAT, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question: q, stream: true }),
+      signal: abortController.signal
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const reader = res.body.getReader(), dec = new TextDecoder();
+    let buf = '', first = true;
+    setExpr('thinking');
+
+    let pendingRender = false;
+    let lastAnswer = '';
+    const scheduleRender = () => {
+      if (pendingRender) return;
+      pendingRender = true;
+      requestAnimationFrame(() => {
+        cEl.innerHTML = fmt(lastAnswer) + '<span class="typing-cursor"></span>';
+        msgs.scrollTop = msgs.scrollHeight;
+        pendingRender = false;
+      });
+    };
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      const lines = buf.split('\n');
+      buf = lines.pop() || '';
+      for (const ln of lines) {
+        if (!ln.startsWith('data: ')) continue;
+        try {
+          const d = JSON.parse(ln.slice(6));
+          if (d.type === 'token' && d.content) {
+            if (first) { answer = d.content; first = false; setExpr('explaining'); setStatus('生成中'); }
+            else answer += d.content;
+            lastAnswer = answer;
+            scheduleRender();
+          } else if (d.type === 'done') {
+            answer = d.answer || answer;
+          } else if (d.type === 'error' || d.error) {
+            const errMsg = d.error || d.message || '未知错误';
+            cEl.innerHTML = fmt(answer ? answer + '\n\n⚠ ' + errMsg : '⚠ ' + errMsg);
+            setStatus('错误');
+            return;
+          }
+        } catch (e) { }
+      }
+    }
+    cEl.innerHTML = fmt(answer);
+    thinking = false;
+    setStatus('就绪');
+
+    if (answer.trim()) {
+      setStatus('合成语音');
+      setExpr('thinking');
+      try {
+        const dh = await fetch(DIGITAL_VIDEO, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: answer, expression: 'explaining' })
+        });
+        if (dh.ok) {
+          const dd = await dh.json();
+          if (dd.video_url) playVideo(dd.video_url, dd.audio_url, dd.viseme_timeline, dd.audio_duration);
+          else if (dd.audio_url) playAudio(dd.audio_url, dd.viseme_timeline, dd.audio_duration);
+        }
+      } catch (e) { console.warn('数字人合成失败:', e); }
+    }
+    setStatus('就绪');
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      cEl.innerHTML = fmt(answer ? answer + '\n\n⏱ 请求超时' : '⏱ 请求超时，请重试');
+    } else {
+      cEl.innerHTML = fmt(answer ? answer + '\n\n⚠ ' + err.message : '⚠ 请求失败：' + err.message);
+    }
+    setStatus('就绪');
+  } finally {
+    clearTimeout(timeoutId);
+    abortController = null;
+    thinking = false;
+    input.disabled = false; sendBtn.disabled = false; sendBtn.textContent = '→'; input.focus();
+  }
+}
+
+function stopGeneration() { if (abortController) abortController.abort(); }
+function setStatus(s) { statusTxt.textContent = s; dot.className = 'status-dot' + (s !== '就绪' ? ' thinking' : ''); }
+function onKey(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } }
+function quickAsk(t) { input.value = t; send(); }
+function askConcept(el) {
+  document.querySelectorAll('.graph-node').forEach(n => n.classList.remove('active'));
+  el.classList.add('active');
+  input.value = '请介绍一下' + el.dataset.concept;
+  send();
+}
+
+// ===== 启动 =====
+setExpr('explaining');
+checkWav2Lip();
+input.focus();
+
+// KaTeX 加载完成后重渲染所有待处理公式（defer 脚本可能晚于首条消息）
+function waitKatexAndRender() {
+  if (typeof katex !== 'undefined') {
+    rerenderPendingMath();
+  } else {
+    setTimeout(waitKatexAndRender, 100);
+  }
+}
+waitKatexAndRender();
+</script>
+</body>
+</html>
